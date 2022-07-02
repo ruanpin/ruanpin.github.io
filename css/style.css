@@ -1,0 +1,41 @@
+
+
+/* -------------------nav bar----------------- */
+#nav {
+    display:flex;
+    justify-content: space-between;
+    border:1px solid #000;
+    padding:0px 24px;
+}
+#nav-text {
+    display:flex;
+    align-items: center;
+}
+#nav-text p {
+    text-align: center;
+    font-size: 32px;
+}
+#nav-items ul{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-right: 50px;
+}
+#nav li {
+    text-align: center;
+    padding:0px 15px;
+    height:88px;
+    /* background-color: #000; */
+    /* border:1px solid #000; */
+    
+}
+#nav a {
+    text-decoration: none;
+    color:#000;
+    display:block;
+    line-height:88px;
+    /* background-color: skyblue; */
+}
+#nav li:hover {
+    background-color: #ADAAA5;
+}
