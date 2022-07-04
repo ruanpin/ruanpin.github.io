@@ -9,6 +9,10 @@ a {
 }
 
 /* ---------------------------nav bar------------------------------------- */
+
+
+
+
 #nav {
     position:sticky;
     display:flex;
@@ -65,6 +69,8 @@ li > a {
     display:block;
 } 
 
+
+
 #nav li:hover {
     background-color: #ADAAA5;
 }
@@ -77,20 +83,27 @@ li > a {
     #nav-button {
         display:none;
     }
+    #listRWD {
+        display:flex;
+        justify-content: space-around;
+        align-items: center;
+        margin-right: 50px;
+    }
 }
 @media screen and (max-width: 800px){
-    #nav-items > ul{
-        display:none
+    #nav-items > #listRWD {
+        display:none;
+        width:100%;
     }
     #nav-button {
         display:flex;  
         align-items: center;
         justify-content: center;
         width:100px; 
-        height: 86px;
         margin-right:24px;
+        height: 86px;
     }
-
+    
     #nav-button a {
         display: block;
         text-align: center;
@@ -112,7 +125,6 @@ li > a {
 
 
 }
-
 
 /*------------------------------ header-------------------------------- */
 header {
