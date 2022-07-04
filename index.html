@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="./css/cssReset.css" rel="stylesheet" media="all">
     <link href="./css/style.css" rel="stylesheet" media="all">
@@ -19,13 +19,13 @@
         <div id="nav-items">
             <div id="nav-button">
                 <div>
-                    <a href="javascript:;" >
+                    <a id="nav-btn"href="javascript:;">
                         <i id="bars" class="fas fa-bars"></i>
                         <i id="x" class="fas fa-x"></i>
                     </a>
                 </div>
             </div>
-            <ul id="listRWD">
+            <ul id="list">
                 <li><a href="javascript:;" class="nav-text">Home</a></li>
                 <li><a href="javascript:;" class="nav-text">About</a></li>
                 <li><a href="javascript:;" class="nav-text">Education</a></li>
@@ -34,7 +34,17 @@
             </ul>
         </div>
     </nav>
-
+    <div id="mobile-list-container">
+        <div id="nav-mobile-list">
+            <ul>
+                <li><a href="javascript:;" class="nav-text">Home</a></li>
+                <li><a href="javascript:;" class="nav-text">About</a></li>
+                <li><a href="javascript:;" class="nav-text">Education</a></li>
+                <li><a href="https://www.ruanpin23.com/Portfolio/website1/page/1/" class="nav-text">Portfolio</a></li>
+                <li><a href="javascript:;" class="nav-text">Contact</a></li>
+            </ul>
+        </div>
+    </div>
     <header>
         <div>
             <h2 id="header-h2" class="header-items">Hello & Welcome</h2>
@@ -44,9 +54,8 @@
     </header>
     <main></main>
     <footer></footer>
-    
+
     <script type="text/javascript" src="./function/barListSwitch.js"></script>
-    <script type="text/javascript" src="./function/checkingWidth.js"></script>
 </body>
 
 </html>

@@ -40,7 +40,7 @@ a {
 
 }
 
-#nav-items ul{
+#nav-items #list{
     display:flex;
     justify-content: space-around;
     align-items: center;
@@ -83,18 +83,13 @@ li > a {
     #nav-button {
         display:none;
     }
-    #listRWD {
-        display:flex;
-        justify-content: space-around;
-        align-items: center;
-        margin-right: 50px;
+    #mobile-list-container {
+        display:none;
     }
 }
 @media screen and (max-width: 800px){
-    #nav-items > #listRWD {
-        display:none;
-        width:100%;
-    }
+    
+
     #nav-button {
         display:flex;  
         align-items: center;
@@ -123,6 +118,21 @@ li > a {
         color:black;
     }
 
+    #nav-items > #list {
+        display:none;
+    }
+
+    #nav-mobile-list {
+        display:none;
+        position: fixed;
+        width:100%;
+        top:88px;
+        left:0px;
+        border:1px solid black;
+        text-align: center;
+        z-index:2;
+        background-color: #fff;
+    }
 
 }
 
