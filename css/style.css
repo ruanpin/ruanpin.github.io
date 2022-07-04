@@ -8,7 +8,7 @@ a {
     text-decoration: none;
 }
 
-/* ---------------------------nav bar----------------- */
+/* ---------------------------nav bar------------------------------------- */
 #nav {
     position:sticky;
     display:flex;
@@ -71,6 +71,8 @@ li > a {
 #nav li:hover .nav-text{
     color:#fff;
 }
+
+/* -------(((((((((((((((((((((((((RWD)))))))))))))))))))))))-----------------nav bar  -----------------------*/
 @media screen and (min-width: 800px){
     #nav-button {
         display:none;
