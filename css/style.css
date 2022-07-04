@@ -32,6 +32,7 @@ a {
 }
 #nav-items {
     height:88px;
+    margin-right:24px;
 
 }
 
@@ -70,12 +71,12 @@ li > a {
 #nav li:hover .nav-text{
     color:#fff;
 }
-@media screen and (min-width: 736px){
+@media screen and (min-width: 800px){
     #nav-button {
         display:none;
     }
 }
-@media screen and (max-width: 735px){
+@media screen and (max-width: 800px){
     #nav-items > ul{
         display:none
     }
@@ -94,12 +95,20 @@ li > a {
         margin:0px auto;
     }
 
-    #nav-button a i {
+    #nav-button a #bars {
         display: block;
         font-size:30px;
         color:black;
         
     }
+
+    #nav-button a #x {
+        display: none;
+        font-size:30px;
+        color:black;
+    }
+
+
 }
 
 
