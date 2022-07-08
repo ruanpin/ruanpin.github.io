@@ -176,7 +176,7 @@ header .brief-intro .img .link-icon li {
     text-align: center;
     border-radius: 50%;
     border:2px solid #ADAAA5;
-    line-height: 33px;
+    line-height: 31px;
 }
 
 header .brief-intro .img .link-icon li:hover {
@@ -187,7 +187,6 @@ header .brief-intro .img .link-icon li:hover {
 
 header .brief-intro .img .link-icon li a {
     display:block;
-    /* line-height: 33px; */
 }
 
 header .brief-intro .img .link-icon li:nth-child(1),
