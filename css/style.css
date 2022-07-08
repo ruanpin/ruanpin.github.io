@@ -137,6 +137,7 @@ header .brief-intro {
     display:flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     width: 400px;
     height: 400px;
 }
@@ -217,7 +218,32 @@ header .brief-intro .img .link-icon li i {
 
 /* RWD----------------------------------------- */
 @media screen and (max-width:800px) {
-    header .brief-intro .img .link-icon li a{
-        line-height: 35px;
+    header .brief-intro {
+        flex-direction: row;
     }
+
+    header .brief-intro .img .selfie {
+        width: 170px;
+        height: 170px;
+    }
+
+    header .brief-intro .img .link-icon {
+        width: 170px;
+    }
+
+    header .brief-intro .img .link-icon li {
+        width: 28px;
+        height: 28px;
+    }
+    
+    header .brief-intro .img .link-icon li a {
+        line-height: 27px;
+    }
+}
+
+/* Complete-intro Part------------------------------------ */
+
+header .complete-intro {
+    width: 300px;
+    height: 300px;
 }
