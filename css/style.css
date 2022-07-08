@@ -262,7 +262,8 @@ header .brief-intro .info {
     }   
     
     header .brief-intro .img .link-icon li a {
-        line-height: 33px;
+        line-height: 31px;
+        -webkit-line-height: 33px;
     }
 }
 
