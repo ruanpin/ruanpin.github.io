@@ -219,6 +219,10 @@ header .brief-intro .info {
     text-align: center;
 }
 
+header .brief-intro h2 {
+    font-size:30px;
+}
+
 
 /* RWD----------------------------------------- */
 @media screen and (max-width:800px) {
