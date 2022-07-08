@@ -215,11 +215,20 @@ header .brief-intro .img .link-icon li i {
     
 }
 
+header .brief-intro .info {
+    text-align: center;
+}
+
 
 /* RWD----------------------------------------- */
 @media screen and (max-width:800px) {
     header .brief-intro {
         flex-direction: row;
+    }
+
+    header .brief-intro .img {
+        width:65%;
+        margin:0px 6px;
     }
 
     header .brief-intro .img .selfie {
