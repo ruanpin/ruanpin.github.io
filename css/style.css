@@ -187,7 +187,9 @@ header .brief-intro .img .link-icon li:hover {
 
 header .brief-intro .img .link-icon li a {
     display:block;
-    line-height: 31px;
+    width: 100%;
+    height: 100%;
+    line-height: 33px;
 }
 
 header .brief-intro .img .link-icon li:nth-child(1),
@@ -215,7 +217,7 @@ header .brief-intro .img .link-icon li i {
 
 /* RWD----------------------------------------- */
 @media screen and (max-width:800px) {
-    header .brief-intro .img .link-icon li {
+    header .brief-intro .img .link-icon li a{
         line-height: 35px;
     }
 }
