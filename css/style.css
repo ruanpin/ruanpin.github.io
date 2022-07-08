@@ -227,7 +227,7 @@ header .brief-intro .info {
     }
 
     header .brief-intro .img {
-        width:65%;
+        width:60%;
         margin:0px 6px;
     }
 
@@ -237,32 +237,32 @@ header .brief-intro .info {
     }
 
     header .brief-intro .img .link-icon {
-        width: 170px;
+        width: 180px;
     }
 
     header .brief-intro .img .link-icon li {
-        width: 28px;
-        height: 28px;
+        width: 33px;
+        height: 33px;
     }
 
     header .brief-intro .img .link-icon li:nth-child(1),
     header .brief-intro .img .link-icon li:nth-child(5) {
         position: relative;
-        top:-52px;
+        top:-50px;
     }
 
     header .brief-intro .img .link-icon li:nth-child(even) {
         position: relative;
-        top:-25px;
+        top:-27px;
     }
 
     header .brief-intro .img .link-icon li:nth-child(3) {
         position: relative;
-        top:-14px;
+        top:-15px;
     }   
     
     header .brief-intro .img .link-icon li a {
-        line-height: 27px;
+        line-height: 31px;
     }
 }
 
