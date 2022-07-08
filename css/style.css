@@ -185,6 +185,10 @@ header .brief-intro .img .link-icon li:hover {
     transition: 0.4s;
 }
 
+header .brief-intro .img .link-icon li a {
+    display:block;
+}
+
 header .brief-intro .img .link-icon li:nth-child(1),
 header .brief-intro .img .link-icon li:nth-child(5) {
     position: relative;
