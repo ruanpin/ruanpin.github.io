@@ -171,7 +171,6 @@ header .brief-intro .img .link-icon {
 }
 
 header .brief-intro .img .link-icon li {
-    box-sizing:content-box;
     width: 35px;
     height: 35px;
     background:#ADAAA5;
@@ -279,7 +278,6 @@ header .brief-intro .info-box .btn:hover {
     }
 
     header .brief-intro .img .link-icon li {
-        box-sizing:content-box;
         width: 33px;
         height: 33px;
         line-height: 30px;
