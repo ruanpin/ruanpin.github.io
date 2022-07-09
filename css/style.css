@@ -134,27 +134,35 @@ header {
 }
 
 /* brief-intro Part----------------------------------------------- */
-header .brief-intro {
+.brief-intro {
     display:flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
     width: 400px;
     height: 550px;
 }
 
-header .brief-intro .img {
+header .brief-intro .intro-card {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+
+header .brief-intro .intro-card .img {
     width: 100%;
     display:flex;
     flex-direction: column;
     align-items: center;
 }
-header .brief-intro .img .selfie {
+header .brief-intro .intro-card .img .selfie {
     width: 300px;
     height: 300px;
 }
 
-header .brief-intro .img .selfie img {
+header .brief-intro .intro-card .img .selfie img {
     width: 100%;
     height: 100%;
     padding:6px;
@@ -163,14 +171,14 @@ header .brief-intro .img .selfie img {
     border-radius: 50%;
 }
 
-header .brief-intro .img .link-icon {
+header .brief-intro .intro-card .img .link-icon {
     display:flex;
     justify-content: space-around;
     align-items: center;
     width: 240px;
 }
 
-header .brief-intro .img .link-icon li {
+header .brief-intro .intro-card .img .link-icon li {
     width: 35px;
     height: 35px;
     background:#ADAAA5;
@@ -179,59 +187,59 @@ header .brief-intro .img .link-icon li {
     line-height: 37px;
 }
 
-header .brief-intro .img .link-icon li:hover {
+header .brief-intro .intro-card .img .link-icon li:hover {
     background: #000;
     transform: scale(1.1);
     transition: 0.4s;
 }
 
-header .brief-intro .img .link-icon li a {
+header .brief-intro .intro-card .img .link-icon li a {
     display:block;
     /* width: 100%;
     height: 100%; */
 }
 
-header .brief-intro .img .link-icon li:nth-child(1),
-header .brief-intro .img .link-icon li:nth-child(5) {
+header .brief-intro .intro-card .img .link-icon li:nth-child(1),
+header .brief-intro .intro-card .img .link-icon li:nth-child(5) {
     position: relative;
     top:-55px;
 }
 
-header .brief-intro .img .link-icon li:nth-child(even) {
+header .brief-intro .intro-card .img .link-icon li:nth-child(even) {
     position: relative;
     top:-25px;
 }
 
-header .brief-intro .img .link-icon li:nth-child(3) {
+header .brief-intro .intro-card .img .link-icon li:nth-child(3) {
     position: relative;
     top:-15px;
 }
 
-header .brief-intro .img .link-icon li i {
+header .brief-intro .intro-card .img .link-icon li i {
     font-size: 24px;
     color:#fff;
     
 }
 
-header .brief-intro .info-box {
+header .brief-intro .intro-card .info-box {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-header .brief-intro .info-box .info {
+header .brief-intro .intro-card .info-box .info {
     text-align: center;
 }
 
-header .brief-intro .info-box .info h2 {
+header .brief-intro .intro-card .info-box .info h2 {
     margin-top:6px;
     font-size:30px;
 }
 
-header .brief-intro .info-box .btn {
+header .brief-intro .btn {
     background-color: #ADAAA5;
     text-align: center;
-    width: 150px;
+    width: 60%;
     height: 72px;
     line-height: 36px;
     border-radius: 20px;
@@ -239,72 +247,84 @@ header .brief-intro .info-box .btn {
     overflow: hidden;
 }
 
-header .brief-intro .info-box .btn a{
+header .brief-intro .btn a{
     display:block;
     color:#fff;
     font-size: 22px;
     font-weight: 500;
 }
 
-header .brief-intro .info-box .btn a:hover {
+header .brief-intro .btn a:hover {
     background:#000;
     transition: 0.5s;
 }
 
-header .brief-intro .info-box .btn:hover {
+header .brief-intro .btn:hover {
     transform: scale(1.1);
     transition: 0.5s;
 }
 /* RWD----------------------------------------- */
 @media screen and (max-width:800px) {
-    header .brief-intro {
-        flex-direction: row;
-        width:100%;
+
+    header {
+        padding-top:40px;  
+    }
+    
+    .brief-intro {
         height:350px;
     }
+    
+    header .brief-intro .intro-card {
+        flex-direction: row;
+        width:100%;
+    }
 
-    header .brief-intro .img {
+    header .brief-intro .intro-card .img {
         width:60%;
         margin:0px 6px;
     }
 
-    header .brief-intro .img .selfie {
+    header .brief-intro .intro-card .img .selfie {
         width: 170px;
         height: 170px;
     }
 
-    header .brief-intro .img .link-icon {
+    header .brief-intro .intro-card .img .link-icon {
         width: 180px;
     }
 
-    header .brief-intro .img .link-icon li {
+    header .brief-intro .intro-card .img .link-icon li {
         width: 33px;
         height: 33px;
         line-height: 33px;
     }
 
-    header .brief-intro .img .link-icon li:nth-child(1),
-    header .brief-intro .img .link-icon li:nth-child(5) {
+    header .brief-intro .intro-card .img .link-icon li:nth-child(1),
+    header .brief-intro .intro-card .img .link-icon li:nth-child(5) {
         position: relative;
         top:-50px;
     }
 
-    header .brief-intro .img .link-icon li:nth-child(even) {
+    header .brief-intro .intro-card .img .link-icon li:nth-child(even) {
         position: relative;
         top:-27px;
     }
 
-    header .brief-intro .img .link-icon li:nth-child(3) {
+    header .brief-intro .intro-card .img .link-icon li:nth-child(3) {
         position: relative;
         top:-15px;
     }   
 
-    header .brief-intro .img .link-icon li i {
+    header .brief-intro .intro-card .img .link-icon li i {
         font-size: 22px;
     }
 
-    header .brief-intro .info-box .info {
+    header .brief-intro .intro-card .info-box .info {
         margin-right:8px;
+    }
+
+    header .brief-intro .btn {
+        margin-top:50px;
     }
 }
 
