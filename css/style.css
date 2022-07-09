@@ -177,7 +177,6 @@ header .brief-intro .img .link-icon li {
     background:#ADAAA5;
     text-align: center;
     border-radius: 50%;
-    border:2px solid #fff;
     line-height: 32px;
 }
 
@@ -283,8 +282,7 @@ header .brief-intro .info-box .btn:hover {
         box-sizing:content-box;
         width: 33px;
         height: 33px;
-        line-height: 29px;
-        border:1px solid #fff;
+        line-height: 30px;
     }
 
     header .brief-intro .img .link-icon li:nth-child(1),
