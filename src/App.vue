@@ -1,28 +1,63 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div id="container">
+      <Header></Header>
+      <Home class="components"></Home>
+      <Portfolio class="components"></Portfolio>
+      <Education class="components"></Education>
+      <Experience class="components"></Experience>
+      <Contact class="components"></Contact>
+      <Footer></Footer>
+    </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Header from './components/Header'
+import Footer from './components/Footer'
+import Home from './components/Home'
+import Portfolio from './components/Portfolio'
+import Education from './components/Education'
+import Experience from './components/Experience'
+import Contact from './components/Contact'
+
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Header,
+    Footer,
+    Home,
+    Portfolio,
+    Education,
+    Experience,
+    Contact,
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+    width: 100%;
+    height: 2000px;
+    font-family: 'Poppins', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+#container {
+  max-width: 85%;
+  margin:0px auto;
 }
 </style>
