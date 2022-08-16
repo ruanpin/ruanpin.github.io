@@ -34,10 +34,12 @@
     },
     methods:{
       letCurrentItemShowup(){
+        // 滑到指定位置時指定items出現
         let navBarItem = document.getElementsByClassName("nav-text")
         let componentsTags = document.getElementsByClassName("components")
         let lastKnownScrollPosition = 0
         let that = this
+        let Timer;
 
         function calWhereAmI (){
           if(lastKnownScrollPosition>=0&&(lastKnownScrollPosition+103)<componentsTags[1].offsetTop){
@@ -56,11 +58,18 @@
         function sendDataToStore(){
           setTimeout(()=>{
             lastKnownScrollPosition = window.pageYOffset
+            console.log('scroll event 持續')
             that.$store.commit('CHANGEITEMNUMBER',calWhereAmI())
-          },200)
+            // 當滑到最下方時關閉此事件監聽，以優化效能
+            if (calWhereAmI()===4){
+              window.removeEventListener('scroll',sendDataToStore)
+            }
+          },100)
+
         }
 
         window.addEventListener('scroll',sendDataToStore)
+        
       }
     },
     mounted(){
