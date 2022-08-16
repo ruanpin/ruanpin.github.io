@@ -73,12 +73,13 @@
         }
       })();
 
-      (function navbarSyncBrighten(){
+      (function navbarSyncBrightenAndLetItemShowup(){
         let navBarItem = document.getElementsByClassName("nav-text")
         let componentsTags = document.getElementsByClassName("components")
         let lastKnownScrollPosition = 0
         let Timer;   //實現防抖效果
 
+        // 以下為讓NAVBAR亮----------------------------------------------------
         function letCurrentPosBarBright(){
           clearTimeout(Timer)
           Timer = setTimeout(()=>{
@@ -113,6 +114,12 @@
         // 0:50,1:1023,2:1656,3:2289,4:2922
         window.addEventListener('scroll',letCurrentPosBarBright)
 
+        // 以下為讓ITEM 出現---------------------------------------------------------
+        function letCurrentItemShowup (){
+          
+        }
+
+        window.addEventListener('scroll',letCurrentPosBarBright)
       })()
     }
   };
