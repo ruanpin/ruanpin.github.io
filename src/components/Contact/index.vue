@@ -1,7 +1,8 @@
 <template>
   <div id="contact">
-      <transition name="showup"><div v-show="isshow">education</div> </transition>
-              <button @click="isshow=!isshow">changeISSHOW</button>
+      <transition name="showup">
+            <div v-show="isshow">education</div>
+      </transition>
   </div>
 </template>
 
@@ -10,7 +11,13 @@
         name:'Contact',
         data(){
             return {
-                isshow:true
+                isshow:false,
+            }
+        },
+        watch:{
+            '$store.state.itemNumber'(newValue, oldValue){
+                if (this.isshow) return
+                this.isshow = this.$store.state.itemNumber>=4
             }
         }
     }

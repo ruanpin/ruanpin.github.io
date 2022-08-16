@@ -32,7 +32,40 @@
 
       }
     },
+    methods:{
+      letCurrentItemShowup(){
+        let navBarItem = document.getElementsByClassName("nav-text")
+        let componentsTags = document.getElementsByClassName("components")
+        let lastKnownScrollPosition = 0
+        let that = this
+
+        function calWhereAmI (){
+          if(lastKnownScrollPosition>=0&&(lastKnownScrollPosition+103)<componentsTags[1].offsetTop){
+            return 0
+          }else if((lastKnownScrollPosition+103)>=componentsTags[1].offsetTop&&(lastKnownScrollPosition+103)<componentsTags[2].offsetTop){
+            return 1
+          }else if((lastKnownScrollPosition+103)>=componentsTags[2].offsetTop&&(lastKnownScrollPosition+103)<componentsTags[3].offsetTop){
+            return 2
+          }else if((lastKnownScrollPosition+103)>=componentsTags[3].offsetTop&&(lastKnownScrollPosition+103)<componentsTags[4].offsetTop){
+            return 3
+          }else if((lastKnownScrollPosition+103)>=componentsTags[4].offsetTop&&lastKnownScrollPosition<document.documentElement.scrollHeight){
+            return 4
+          }
+        }
+
+        function sendDataToStore(){
+          setTimeout(()=>{
+            lastKnownScrollPosition = window.pageYOffset
+            that.$store.commit('CHANGEITEMNUMBER',calWhereAmI())
+          },200)
+        }
+
+        window.addEventListener('scroll',sendDataToStore)
+      }
+    },
     mounted(){
+      this.letCurrentItemShowup();
+
       (function navbarSwitch (){
         // 點擊漢堡圖和navBar內選項會關閉已展開的導覽列
         let btn = document.querySelector("#nav-btn")
@@ -79,6 +112,8 @@
         let lastKnownScrollPosition = 0
         let Timer;   //實現防抖效果
 
+        // let POS = window.pageYOffset
+
         // 以下為讓NAVBAR亮----------------------------------------------------
         function letCurrentPosBarBright(){
           clearTimeout(Timer)
@@ -115,11 +150,16 @@
         window.addEventListener('scroll',letCurrentPosBarBright)
 
         // 以下為讓ITEM 出現---------------------------------------------------------
-        function letCurrentItemShowup (){
-          
-        }
+        // function letCurrentItemShowup (){
+        //   if (calWhereAmI()===1) {
+        //     console.log('NOW IS IN 1', that)
+        //     // this.$store.commit('ABC', calWhereAmI())
+        //   }
+        // }
 
-        window.addEventListener('scroll',letCurrentPosBarBright)
+        // window.addEventListener('scroll',()=>{
+        //   letCurrentItemShowup()
+        // })
       })()
     }
   };

@@ -3,7 +3,7 @@
         <div class="title">
             <h2>Experience</h2>
         </div>
-        <transition name="showup" appear>
+        <transition name="showup">
             <div class="exp-container" v-show="isshow">
                 <div class="exp-boxes">
                     <div class="job-brife">
@@ -19,25 +19,8 @@
                             </p>
                     </div>
                 </div>
-                
-                <div class="exp-boxes">
-                    <div class="job-brife">
-                            <h4>助理工程師</h4>
-                            <p class="companyInfo">國光生物科技|製造部</p>
-                            <p>2020/2-2022/6</p>
-                    </div>
-                    <div class="job-intro">
-                            <h4>國光生物科技股份有限公司</h4>
-                            <p>
-                                擔任製造部助理工程師一職，參與日常疫苗製程製造流程，另有參與擴廠專案，協助建置新產線。
-                            </p>
-                    </div>
-                </div>
-
             </div>
         </transition>
-        <button @click="isshow=!isshow">changeISSHOW</button>
-
     </div>
 </template>
 
@@ -46,7 +29,13 @@
         name:'Experience',
         data(){
             return {
-                isshow:true
+                isshow:false,
+            }
+        },
+        watch:{
+            '$store.state.itemNumber'(newValue, oldValue){
+                if (this.isshow) return
+                this.isshow = this.$store.state.itemNumber>=3
             }
         }
     }
@@ -56,8 +45,8 @@
     #experience {
         width: 100%;
         background-color: rgb(68, 133, 158);
-        /* height: 600px; */
         margin : 33px auto;
+        min-height: 294px;
     }
 
     .title h2{
@@ -119,6 +108,10 @@
 
     @media screen and (max-width:800px) {
         
+        #experience {
+            min-height: 541px;
+        }
+
         .exp-boxes {
             width: 90%;
         }
