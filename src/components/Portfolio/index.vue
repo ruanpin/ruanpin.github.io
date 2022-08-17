@@ -1,8 +1,11 @@
 <template>
   <div id="portfolio">
-      <transition name="showup">
+    <div class="title">
+        <h2>Portfolio</h2>
+    </div>
+    <transition name="showup">
         <div v-show="isshow">portfolio</div> 
-      </transition>
+    </transition>
   </div>
 </template>
 
@@ -30,6 +33,13 @@
         background-color: skyblue;
         height: 600px;
         margin : 33px auto;
+    }
+
+    .title h2{
+        font-size: 1.8em;
+        margin-bottom: 36px;
+        color:rgb(95, 72, 33);
+        font-weight: 700;
     }
 
     @keyframes showUp {

@@ -94,7 +94,7 @@
     padding:0px 12px;
     width: 100%;
     flex-wrap: wrap;
-    background-color: rgb(138, 171, 184);
+    /* background-color: rgb(138, 171, 184); */
 }
 
 /* brief-intro Part----------------------------------------------- */

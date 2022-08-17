@@ -6,6 +6,9 @@
         <transition name="showup">
             <div class="exp-container" v-show="isshow">
                 <div class="exp-boxes">
+                    <div class="job-icon">
+                        <div><i class="fa-solid fa-circle"></i></div>
+                    </div>
                     <div class="job-brife">
                             <h4>助理工程師</h4>
                             <p class="companyInfo">國光生物科技|製造部</p>
@@ -44,7 +47,6 @@
 <style scoped>
     #experience {
         width: 100%;
-        background-color: rgb(68, 133, 158);
         margin : 33px auto;
         min-height: 294px;
     }
@@ -52,10 +54,20 @@
     .title h2{
         font-size: 1.8em;
         margin-bottom: 36px;
+        color:rgb(95, 72, 33);
+        font-weight: 700;
     }
 
     .exp-container {
         padding-bottom : 2em;
+    }
+    .exp-boxes .job-icon {
+        display:flex;
+        align-items: center;        
+    }
+    .job-icon i {
+        color:white;
+        font-size:1.3em;
     }
 
     .exp-boxes {
@@ -64,7 +76,8 @@
         width: 80%;
         justify-content: space-around;
         margin:0px auto;
-        background-color: rgb(247,247,255);
+        background-color: rgb(245, 235, 216);
+        /* background-color: rgb(247,247,255); */
         padding: 1.5em;
         margin-bottom:1em;
         line-height: 1.5;
@@ -74,6 +87,7 @@
     .exp-boxes h4 {
         font-size: 1.3em;
         font-weight: 700;
+        padding-bottom:1em;
     }
 
     .exp-boxes .job-brife{
@@ -95,7 +109,7 @@
 
     @keyframes showUp {
         from {
-            transform: translateX(-10%);
+            transform: translateX(-5%);
             opacity: 0;
         }
         to {
@@ -118,10 +132,14 @@
 
         .exp-boxes {
             width: 90%;
+            display:flex;
+            flex-direction: column;
+            align-items: center;
         }
         
         .exp-boxes .job-brife{
             width: 80%;
+            padding-top:1em;
             border-right: 0px;
             padding-bottom:1.5em;
             border-bottom:1px solid gray;

@@ -7,8 +7,8 @@
       <Education class="components"></Education>
       <Experience class="components"></Experience>
       <Contact class="components"></Contact>
-      <Footer></Footer>
     </div>
+    <Footer></Footer>
   </div>
 </template>
 

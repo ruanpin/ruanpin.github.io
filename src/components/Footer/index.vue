@@ -1,5 +1,17 @@
 <template>
-  <div id="footer">footer</div>
+  <div id="footer">
+    <div>
+        <p>
+          Vincent Ruan © 2022
+        </p>
+        <p>
+          All rights reserved.
+        </p> 
+        <p>
+          Vue.js / VueRouter /VueX
+        </p>      
+    </div>
+  </div>
 </template>
 
 <script>
@@ -10,7 +22,19 @@
 
 <style>
   #footer {
-    background-color: rgb(57, 188, 240);
-    height: 300px;
+    background-color: #ADAAA5;
+    height: 18vh;
+    display :flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #footer p {
+     text-align :center;
+     line-height: 2em;
+  }
+
+  #footer p:first-child, #footer p:nth-child(2)  {
+    font-weight: 700;
   }
 </style>
