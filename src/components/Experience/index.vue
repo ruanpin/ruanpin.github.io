@@ -85,6 +85,10 @@
         font-style: italic;
     }
 
+    .job-brife p {
+        color:rgb(51, 50, 50);
+    }
+
     .exp-boxes .job-intro{
         width: 50%;
     }
@@ -101,7 +105,7 @@
     }
 
     .showup-enter-active {
-        animation: showUp 1.5s;
+        animation: showUp 1s;
     }
 
     /* RWD-------------------------------------------------- */

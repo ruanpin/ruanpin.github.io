@@ -44,6 +44,6 @@
     }
 
     .showup-enter-active {
-        animation: showUp 1.5s;
+        animation: showUp 1s;
     }
 </style>
