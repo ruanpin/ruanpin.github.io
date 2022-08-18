@@ -10,24 +10,24 @@
                     <div class="icon"><i class="fa-solid fa-graduation-cap"></i></div>
                     <div class="edu-content">
                         <h4><span class="iconBGC">2018</span></h4>
-                        <h4><span>理學學士學位</span> － 亞洲大學</h4>
+                        <h4><span class="spanStrong">理學學士學位</span> － 亞洲大學</h4>
                         <p>生物科技學系</p>
                     </div>
                 </div>
             </div>
 
-            <!-- <div class="language-brief">
+            <div class="edu-brief">
                 <div class="set-middle-container">
                     <div class="icon"><i class="fa-solid fa-language"></i></div>
-                    <div class="lang-content">
-                        <h4><span class="strong">英語能力證明</span></h4>
-                        <h4><span>TOEIC測驗</span> 740</h4>
+                    <div class="edu-content">
+                        <h4><span class="iconBGC">英語能力證明</span></h4>
+                        <h4><span class="spanStrong">TOEIC測驗</span> － 740</h4>
                     </div>
                 </div>
-                
             </div>
 
-            <div class="skill-brief">
+
+            <!-- <div class="skill-brief">
                 <div class="set-middle-container">
                     <div class="icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
                     <ul class="skills-content">
@@ -64,7 +64,7 @@
 <style scoped>
     #education {
         width: 100%;
-        background-color: rgb(99, 183, 216);
+        /* background-color: rgb(99, 183, 216); */
         height: 1000px;
         margin : 33px auto;
     }
@@ -81,8 +81,10 @@
         justify-content: center;
         margin: 0 auto;
         max-width: 80%;
-        background-color: rgb(164, 134, 167);
-
+        background-color: rgb(245,235,216);
+        margin-bottom:2em;
+        border-radius: 2em;
+        font-size: 1.2em;
     }
 
     .edu-brief .set-middle-container {
@@ -96,13 +98,14 @@
         display:flex;
         justify-content: center;
         align-items: center;
-        color:#fff;
-        background-color: black;
+        color:rgb(85, 62, 23);
+        background-color: #fff;
         width:2em;
         height: 2em;
         border-radius: 50%;
         margin :1.4em 0;
         margin-right:1em;
+        font-size: 1.5em;
     }
 
     .edu-content {
@@ -118,15 +121,20 @@
         padding :0.2em 0.8em; 
         background-color: #fff;
         border-radius: 1em;
+        font-weight: 700;
+    }
+
+    .spanStrong {
+        font-weight: 700;
     }
 
     @keyframes showUp {
         from {
-            transform: translateX(-10%);
+            transform: translateY(7%);
             opacity: 0;
         }
         to {
-            transform: translateX(0%);
+            transform: translateY(0%);
             opacity: 1;
         }
     }
