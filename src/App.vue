@@ -57,7 +57,8 @@ a {
 }
 
 #container {
-  max-width: 85%;
+  max-width: 1400px;
+  width:85%;
   margin:0px auto;
 }
 </style>

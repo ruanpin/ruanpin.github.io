@@ -100,7 +100,7 @@
         font-style: italic;
     }
 
-    .job-brife p {
+    .job-brife p, .job-intro p {
         color:rgb(51, 50, 50);
     }
 

@@ -86,6 +86,8 @@
 </script>
 
 <style scoped>
+  /* 森林綠色碼rgb(94,102,79)------灰藍色色碼rgb(101,122,141)---1大地棕色碼rgb(177,153,115)--- */
+  /* 2大地棕色碼rgb(95,72,33)--------- */
     header {
     display:flex;
     justify-content: space-around;

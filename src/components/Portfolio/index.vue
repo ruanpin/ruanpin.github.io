@@ -140,7 +140,7 @@
 
     @media screen and (max-width:800px) {
         #mySwiper {
-            width: 100%;
+            width: 98%;
         }
     }
 
