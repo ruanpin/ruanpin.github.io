@@ -130,7 +130,7 @@ header .brief-intro .intro-card .img .selfie img {
     width: 100%;
     height: 100%;
     padding:6px;
-    background:#ADAAA5;
+    background:rgb(177,153,115);
     object-fit: cover;
     border-radius: 50%;
 }
@@ -145,7 +145,7 @@ header .brief-intro .intro-card .img .link-icon {
 header .brief-intro .intro-card .img .link-icon li {
     width: 37px;
     height: 37px;
-    background:#ADAAA5;
+    background:rgb(101,122,141);
     text-align: center;
     border-radius: 50%;
     line-height: 44px;
@@ -201,7 +201,7 @@ header .brief-intro .intro-card .info-box .info h2 {
 }
 
 header .brief-intro .btn {
-    background-color: #ADAAA5;
+    background-color: rgb(101,122,141);
     text-align: center;
     width: 60%;
     height: 72px;
@@ -303,7 +303,7 @@ header .complete-intro {
 }
 
 header .complete-intro .title h3{
-    color:#ADAAA5;
+    color:rgb(95, 72, 33);
     font-size: 30px;
     font-weight: 900;
 }

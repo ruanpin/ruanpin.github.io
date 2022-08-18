@@ -79,6 +79,7 @@
         background-color: rgb(245, 235, 216);
         /* background-color: rgb(247,247,255); */
         padding: 1.5em;
+        padding-bottom:2em;
         margin-bottom:1em;
         line-height: 1.5;
         border-radius: 20px;
@@ -109,11 +110,11 @@
 
     @keyframes showUp {
         from {
-            transform: translateX(-5%);
+            transform: translateY(7%);
             opacity: 0;
         }
         to {
-            transform: translateX(0%);
+            transform: translateY(0%);
             opacity: 1;
         }
     }
@@ -127,7 +128,7 @@
     @media screen and (max-width:800px) {
         
         #experience {
-            min-height: 541px;
+            min-height: 683px;
         }
 
         .exp-boxes {
@@ -135,6 +136,8 @@
             display:flex;
             flex-direction: column;
             align-items: center;
+            min-height: 570px;
+
         }
         
         .exp-boxes .job-brife{

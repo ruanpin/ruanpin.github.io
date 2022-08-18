@@ -22,11 +22,11 @@
 
 <style>
   #footer {
-    background-color: #ADAAA5;
+    background-color: rgb(177,153,115);
     height: 18vh;
     display :flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center; 
   }
 
   #footer p {

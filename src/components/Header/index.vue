@@ -172,8 +172,8 @@
     height: 50px;
     justify-content: space-between;
     align-items: center;
-    border-top:1px solid rgba(0, 0, 0, 0.8);
-    border-bottom:1px solid rgba(0, 0, 0, 0.8);
+    border-top:1px solid rgba(95, 72, 33, 0.8);
+    border-bottom:1px solid rgba(95, 72, 33, 0.8);
     z-index: 10;
     background:#fff;
 }
@@ -195,6 +195,7 @@
     min-width: 500px;
     line-height: 100%;
     margin-right:3%;
+    font-weight: 600;
 }
 
 .nav a{
@@ -209,7 +210,7 @@
 
 .active-li, .nav a:hover {
     color:#fff;
-    background:#ADAAA5;
+    background:rgb(196, 175, 142);
 }
 
 
@@ -268,5 +269,6 @@
         cursor: pointer;
         
     }
+
 }
 </style>

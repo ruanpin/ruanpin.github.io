@@ -4,16 +4,24 @@
         <h2>Portfolio</h2>
     </div>
     <transition name="showup">
-        <div v-show="isshow">portfolio
+        <div v-show="isshow">
             
             <!-- Swiper@5.4.5--vue-awesome-swiper@4.1.1-------------------->
             <div class="app-container">
                 <swiper :options="swiperOption" id="mySwiper">
+
                     <!-- 輪播圖分頁 -->
-                    <swiper-slide class="swiper_slide_item">Slide 1</swiper-slide>
-                    <swiper-slide class="swiper_slide_item">Slide 2</swiper-slide>
-                    <swiper-slide class="swiper_slide_item">Slide 3</swiper-slide>
-                    <!-- 小圓點 -->
+                    <swiper-slide class="swiper_slide_item">
+                        Slide 1
+                    </swiper-slide>
+                    <swiper-slide class="swiper_slide_item">
+                        Slide 2
+                    </swiper-slide>
+                    <swiper-slide class="swiper_slide_item">
+                        Slide 3
+                    </swiper-slide>
+
+                    <!-- 下方動態小圓點 -->
                     <div class="swiper-pagination" slot="pagination"></div>
                     <!-- 控制左右按鈕 -->
                     <div class="swiper-button-prev swiper-btn" slot="button-prev"></div> 
@@ -52,7 +60,7 @@
                     loop: true, 
                     speed: 1000, // 切換時速度
                     autoplay: {
-                        delay: 2000, // 每頁停留多久
+                        delay: 5000, // 每頁停留多久
                         disableOnInteraction: false, // 使用者操作後，會不會停止自動撥放功能
                         stopOnLastSlide: true, // true:當轉到最後一頁便不會再轉動(loop:true時無效)
                     },
@@ -76,7 +84,7 @@
 <style scoped>
     #portfolio {
         width: 100%;
-        background-color: skyblue;
+        /* background-color: skyblue; */
         height: 600px;
         margin : 33px auto;
     }
@@ -107,14 +115,17 @@
 
 
     #mySwiper{
-        width: 100%;
+        width: 80%;
         height: 450px;
         background-color: aquamarine;
+        border-radius: 35px;
     }
 
     .swiper-slide.swiper_slide_item{
         height: 450px;
-        background-color:aliceblue;
+        background-color:rgb(245,235,216);
+        padding:1.5em;
+
     }
 
     .swiper-pagination-bullet-custom .swiper-pagination-bullet{
@@ -124,5 +135,13 @@
 
     #mySwiper {
         --swiper-navigation-color:rgb(95, 72, 33);
+        --swiper-pagination-color:rgb(95, 72, 33);
     }
+
+    @media screen and (max-width:800px) {
+        #mySwiper {
+            width: 100%;
+        }
+    }
+
 </style>
