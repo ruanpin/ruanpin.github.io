@@ -98,8 +98,8 @@
         display:flex;
         justify-content: center;
         align-items: center;
-        color:rgb(85, 62, 23);
-        background-color: #fff;
+        color:#fff;
+        background-color: rgb(95,72,33);
         width:2em;
         height: 2em;
         border-radius: 50%;
@@ -119,9 +119,10 @@
 
     .iconBGC {
         padding :0.2em 0.8em; 
-        background-color: #fff;
+        background-color: rgb(77, 95, 44);
         border-radius: 1em;
         font-weight: 700;
+        color:#fff;
     }
 
     .spanStrong {
