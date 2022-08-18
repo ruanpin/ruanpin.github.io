@@ -26,6 +26,21 @@
                 </div>
             </div>
 
+            <div class="edu-brief">
+                <div class="set-middle-container">
+                    <div class="icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+                    <div class="edu-content">
+                        <div class="routers">
+                            <h4><a href="#"><span class="iconBGC">JS</span></a></h4>
+                            <h4><span class="iconBGC">H5&amp;C3</span></h4>
+                            <h4><span class="iconBGC">其他</span></h4>
+                        </div>
+                        
+                        <router-view></router-view>
+                        <!-- <h4><span class="spanStrong">TOEIC測驗</span> － 740</h4> -->
+                    </div>
+                </div>
+            </div>
 
             <!-- <div class="skill-brief">
                 <div class="set-middle-container">
@@ -129,6 +144,12 @@
         font-weight: 700;
     }
 
+    /* routers--------------------------------------------- */
+
+    /* .routers{
+        
+    } */
+
     @keyframes showUp {
         from {
             transform: translateY(7%);
@@ -160,7 +181,11 @@
         .edu-content{
             padding-top:0; 
         }
-         
+    /* routers--------------------------------------------- */
+        
+        .routers {
+            display:flex;
+        }
 
     }
 
