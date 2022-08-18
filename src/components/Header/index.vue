@@ -11,7 +11,7 @@
         <a href="javascript:;" class="nav-text">Portfolio</a>
       </li>
       <li>
-        <a href="javascript:;" class="nav-text">Education</a>
+        <a href="javascript:;" class="nav-text">Education&amp;Skill</a>
       </li>
       <li>
         <a href="javascript:;" class="nav-text">Experience</a>
