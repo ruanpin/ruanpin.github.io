@@ -47,18 +47,6 @@
                     </div>
                 </div>
             </div>
-
-            <!-- <div class="skill-brief">
-                <div class="set-middle-container">
-                    <div class="icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
-                    <ul class="skills-content">
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                    </ul>
-                </div>
-                
-            </div> -->
         </div> 
     </transition>
 
@@ -181,6 +169,8 @@
 
 
 
+
+
     @keyframes showUp {
         from {
             transform: translateY(7%);
@@ -233,6 +223,10 @@
 
         .skillsBtn {
             margin:0.2em;
+        }
+
+        .router-display-area {
+            padding-bottom:3em;
         }
     }
 
