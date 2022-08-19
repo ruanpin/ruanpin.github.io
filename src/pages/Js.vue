@@ -1,6 +1,6 @@
 <template>
     <div >
-      Javascript, VueJs, VueX, VueRouter, NodeJS, JQuery
+      Javascript, VueJs, VueX,<br> VueRouter, NodeJS, JQuery
     </div>
 </template>
 
