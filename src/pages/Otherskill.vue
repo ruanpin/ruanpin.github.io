@@ -1,6 +1,6 @@
 <template>
     <div>
-      Otherskills
+      Git, Github, Webpack, npm
     </div>
 </template>
 
@@ -10,6 +10,9 @@
     }
 </script>
 
-<style>
-
+<style scoped>
+  div {
+    line-height: 1.5em;
+    text-align: center;
+  }
 </style>

@@ -80,7 +80,7 @@
     #education {
         width: 100%;
         /* background-color: rgb(99, 183, 216); */
-        height: 1300px;
+        height: 700px;
         margin : 33px auto;
     }
 
@@ -187,7 +187,9 @@
     }
 
     @media screen and (max-width:800px) {
-
+        #education {
+            height: 1180px;
+        }
         .edu-brief {
             max-width: 90%;
         }

@@ -1,6 +1,6 @@
 <template>
-    <div>
-      JS
+    <div >
+      Javascript, VueJs, VueX, VueRouter, NodeJS, JQuery
     </div>
 </template>
 
@@ -10,6 +10,9 @@
     }
 </script>
 
-<style>
-
+<style scoped>
+  div {
+    line-height: 1.5em;
+    text-align: center;
+  }
 </style>

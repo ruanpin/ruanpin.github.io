@@ -1,6 +1,6 @@
 <template>
   <div>
-      H5C3
+      Html, Css, SCSS, Bootstrap
   </div>
 </template>
 
@@ -10,6 +10,9 @@
     }
 </script>
 
-<style>
-
+<style scoped>
+  div {
+    line-height: 1.5em;
+    text-align: center;
+  }
 </style>
