@@ -12,7 +12,7 @@
 
 <style scoped>
   div {
-    line-height: 1.5em;
+    line-height: 1.5em; 
     text-align: center;
   }
 </style>
