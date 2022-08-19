@@ -4,16 +4,17 @@
         <h2>Contact</h2>
     </div>
     <transition name="showup">
-        <div v-show="isshow">
-            <form method="POST" action="" @submit="handleSubmit">
-                <label>姓名<br><input type="text" placeholder="請輸入姓名" name="username" :value="userContent"></label><br>
-                <label>信箱<br><input type="email" placeholder="請輸入信箱" name="useremail" :value="emailContent"></label><br>
-                <input type="submit" value="送出">
-            </form>
+        <div v-show="isshow" class="form-section">
+            <div class="container">
+                <form method="POST" action="" class="contact-form" @submit="handleSubmit" >
+                    <label>姓名<br><input type="text" placeholder="請輸入姓名" name="username" :value="userContent"></label><br>
+                    <label>信箱<br><input type="email" placeholder="請輸入信箱" name="useremail" :value="emailContent"></label><br>
+                    <input type="submit" value="送出">
+                </form>
+            </div>
             <transition name="formMsgShow">
                 <div v-show="FormMsg">{{FormMsg}}</div>
             </transition>
-            
         </div>
     </transition>
   </div>
@@ -63,6 +64,20 @@
         color:rgb(95, 72, 33);
         font-weight: 700;
     }
+
+    .form-section {
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* max-width:100%; */
+    }
     
     @keyframes showUp {
         from {
@@ -93,5 +108,16 @@
 
     .formMsgShow-enter-active {
         animation: FormMsgShow 1s;
+    }
+
+    @media screen and (max-width:800px) {
+        /* .form-section {
+            justify-content: center;
+
+        } */
+
+        .container {
+            width :80%;
+        }
     }
 </style>

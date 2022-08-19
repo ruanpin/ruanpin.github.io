@@ -42,7 +42,7 @@
                         </div>
                     </div>
                     <div class="router-display-area">
-                        <p v-show="isRouterTipShow">點選藍色框展示</p>
+                        <p v-show="isRouterTipShow">請點選藍色框展示</p>
                         <router-view v-show="!isRouterTipShow"></router-view>
                     </div>
                 </div>
@@ -167,7 +167,9 @@
         align-items: center;
     }
 
-
+    .router-display-area p {
+        font-weight: 700;
+    }
 
 
 
