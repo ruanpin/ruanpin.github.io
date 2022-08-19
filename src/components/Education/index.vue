@@ -32,13 +32,18 @@
                     <div class="edu-content router-content">
                         <h4><span class="iconBGC">技能</span></h4>
                         <div class="routers">
-                            <h4><a href="#"><span class="iconBGC skillsBtn">JS</span></a></h4>
-                            <h4><span class="iconBGC skillsBtn">H5&amp;C3</span></h4>
-                            <h4><span class="iconBGC skillsBtn">其他</span></h4>
-                        </div>
-                        
-                        <router-view></router-view>
+                            <h4 @click="routerCounter++"><router-link class="iconBGC skillsBtn" active-class="" to="/js" >JS</router-link></h4>
+                            <h4 @click="routerCounter++"><router-link class="iconBGC skillsBtn" active-class="" to="h5c3" >H5&amp;C3</router-link></h4>
+                            <h4 @click="routerCounter++"><router-link class="iconBGC skillsBtn" active-class="" to="otherskill" >其他</router-link></h4>
 
+                            <!-- <h4><a href="#"><span class="iconBGC skillsBtn">JS</span></a></h4>
+                            <h4><span class="iconBGC skillsBtn">H5&amp;C3</span></h4>
+                            <h4><span class="iconBGC skillsBtn">其他</span></h4> -->
+                        </div>
+                    </div>
+                    <div class="router-display-area">
+                        <p v-show="isRouterTipShow">點選藍色框展示</p>
+                        <router-view></router-view>
                     </div>
                 </div>
             </div>
@@ -66,12 +71,18 @@
         data(){
             return {
                 isshow:false,
+                isRouterTipShow:true,
+                routerCounter:0
             }
         },
         watch:{
             '$store.state.itemNumber'(newValue, oldValue){
                 if (this.isshow) return
                 this.isshow = this.$store.state.itemNumber>=2
+            },
+            routerCounter(){
+                if(!this.isRouterTipShow) return
+                this.isRouterTipShow = !this.isRouterTipShow
             }
         }
     }
@@ -81,7 +92,7 @@
     #education {
         width: 100%;
         /* background-color: rgb(99, 183, 216); */
-        height: 1000px;
+        height: 1300px;
         margin : 33px auto;
     }
 
@@ -166,6 +177,11 @@
     .router-content {
         display:flex;
         align-items: center;
+    }
+
+    .router-display-area {
+        /* width: 100%;
+        height: 100%; */
     }
 
     @keyframes showUp {
