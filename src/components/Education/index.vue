@@ -5,13 +5,13 @@
     </div>
     <transition name="showup">
         <div class="content" v-show="isshow">
-            <div class="edu-brief">
+            <div class="edu-brief edu-only">
                 <div class="set-middle-container">
                     <div class="icon"><i class="fa-solid fa-graduation-cap"></i></div>
                     <div class="edu-content">
                         <h4><span class="iconBGC">2018</span></h4>
                         <h4><span class="spanStrong">理學學士學位</span> － 亞洲大學</h4>
-                        <p>生物科技學系</p>
+                        <p id="edu-major">生物科技學系</p>
                     </div>
                 </div>
             </div>
@@ -29,15 +29,16 @@
             <div class="edu-brief">
                 <div class="set-middle-container">
                     <div class="icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
-                    <div class="edu-content">
+                    <div class="edu-content router-content">
+                        <h4><span class="iconBGC">技能</span></h4>
                         <div class="routers">
-                            <h4><a href="#"><span class="iconBGC">JS</span></a></h4>
-                            <h4><span class="iconBGC">H5&amp;C3</span></h4>
-                            <h4><span class="iconBGC">其他</span></h4>
+                            <h4><a href="#"><span class="iconBGC skillsBtn">JS</span></a></h4>
+                            <h4><span class="iconBGC skillsBtn">H5&amp;C3</span></h4>
+                            <h4><span class="iconBGC skillsBtn">其他</span></h4>
                         </div>
                         
                         <router-view></router-view>
-                        <!-- <h4><span class="spanStrong">TOEIC測驗</span> － 740</h4> -->
+
                     </div>
                 </div>
             </div>
@@ -125,8 +126,14 @@
 
     .edu-content {
         padding-top:1.5em;  
+        padding-bottom:1.5em;
+    }
+
+    .eud-only {
         padding-bottom:2em;
     }
+
+    
 
     .edu-content h4 {
         margin: 1em auto;
@@ -140,6 +147,12 @@
         color:#fff;
     }
 
+    .skillsBtn {
+        background-color: rgb(101,122,141);
+        margin:1em;
+        /* margin-bottom:1.5em; */
+    }
+
     .spanStrong {
         font-weight: 700;
     }
@@ -149,6 +162,11 @@
     /* .routers{
         
     } */
+
+    .router-content {
+        display:flex;
+        align-items: center;
+    }
 
     @keyframes showUp {
         from {
@@ -166,6 +184,10 @@
     }
 
     @media screen and (max-width:800px) {
+
+        .edu-brief {
+            max-width: 90%;
+        }
         .set-middle-container {
             flex-direction: column;
         }
@@ -181,12 +203,24 @@
         .edu-content{
             padding-top:0; 
         }
+
+        #edu-major {
+            text-align: center;
+            padding-bottom: 1em;
+        }
     /* routers--------------------------------------------- */
         
         .routers {
             display:flex;
         }
 
+        .router-content {
+            flex-direction: column;
+        }
+
+        .skillsBtn {
+            margin:0.2em;
+        }
     }
 
 
