@@ -179,10 +179,7 @@
         align-items: center;
     }
 
-    .router-display-area {
-        /* width: 100%;
-        height: 100%; */
-    }
+
 
     @keyframes showUp {
         from {
