@@ -43,7 +43,7 @@
                     </div>
                     <div class="router-display-area">
                         <p v-show="isRouterTipShow">點選藍色框展示</p>
-                        <router-view></router-view>
+                        <router-view v-show="!isRouterTipShow"></router-view>
                     </div>
                 </div>
             </div>
