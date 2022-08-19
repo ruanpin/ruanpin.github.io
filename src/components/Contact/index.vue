@@ -66,7 +66,7 @@
     
     @keyframes showUp {
         from {
-            transform: translateY(5%);
+            transform: translateY(5%); 
             opacity: 0;
         }
         to {
