@@ -119,13 +119,14 @@
     input[type="submit"] {
         background-color: rgb(101,122,141);
         border:0px none;
-        padding:0.8em;
+        padding:0.5em;
         border-radius: 10px;  
         display:block;
         margin : 1em auto;
         cursor :pointer;
         font-weight: 700;
-        width:100%
+        width:100%;
+        font-size: 1.2em;
     }
     
     @keyframes showUp {
@@ -172,5 +173,6 @@
         input[type="text"], input[type="email"] {
             padding: 0.8em;
         }
+
     }
 </style>
