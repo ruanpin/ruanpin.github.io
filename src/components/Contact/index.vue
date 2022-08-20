@@ -173,6 +173,6 @@
         input[type="text"], input[type="email"] {
             padding: 0.8em;
         }
-
+ 
     }
 </style>
