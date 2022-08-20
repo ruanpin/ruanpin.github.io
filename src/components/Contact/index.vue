@@ -6,10 +6,10 @@
     <transition name="showup">
         <div v-show="isshow" class="form-section">
             <div class="container">
-                <form method="POST" action="" class="contact-form" @submit="handleSubmit" >
-                    <label>姓名<br><input type="text" placeholder="請輸入姓名" name="username" :value="userContent"></label><br>
-                    <label>信箱<br><input type="email" placeholder="請輸入信箱" name="useremail" :value="emailContent"></label><br>
-                    <input type="submit" value="送出">
+                <form method="POST" action="http://127.0.0.1:5000/testPost" class="contact-form">
+                    <label>姓名<br><input type="text" placeholder="請輸入姓名" name="username" ref="nameInput" value=""></label><br>
+                    <label>信箱<br><input type="email" placeholder="請輸入信箱" name="useremail" ref="emailInput" value=""></label><br>
+                    <input type="submit" value="送出" @click="handleSubmit">
                 </form>
             </div>
             <transition name="formMsgShow">
@@ -27,8 +27,6 @@
             return {
                 isshow:false,
                 FormMsg:'',
-                userContent:'',
-                emailContent:''
             }
         },
         watch:{
@@ -38,13 +36,15 @@
             }
         },
         methods:{
-            handleSubmit(e){
-                console.log(e)
+            handleSubmit(){
                 this.FormMsg = ''
-                e.preventDefault();
+                // e.preventDefault();
                 this.FormMsg = 'Thank you for contacting, I will reply to you as soon as possible !'
-                // this.userContent = ''
-                // this.emailContent = ''
+                setTimeout(() => {
+                    this.$refs.nameInput.value = ""
+                    this.$refs.emailInput.value = ""
+                }, 10);
+                    
             }
         }
     }
