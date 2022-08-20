@@ -38,7 +38,7 @@
         methods:{
             handleSubmit(){
                 this.FormMsg = ''
-                // e.preventDefault();
+                // e.preventDefault(); 
                 this.FormMsg = 'Thank you for contacting, I will reply to you as soon as possible !'
                 setTimeout(() => {
                     this.$refs.nameInput.value = ""
