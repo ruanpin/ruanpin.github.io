@@ -39,11 +39,12 @@
         },
         methods:{
             handleSubmit(e){
+                console.log(e)
                 this.FormMsg = ''
                 e.preventDefault();
                 this.FormMsg = 'Thank you for contacting, I will reply to you as soon as possible !'
-                this.userContent = ''
-                this.emailContent = ''
+                // this.userContent = ''
+                // this.emailContent = ''
             }
         }
     }
