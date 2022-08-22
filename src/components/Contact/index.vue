@@ -19,7 +19,7 @@
                 </form>
             </div>
             <transition name="formMsgShow">
-                <div v-show="FormMsg">{{FormMsg}}</div>
+                <div v-show="FormMsg">{{FormMsg}}</div> 
             </transition>
         </div>
     </transition>
