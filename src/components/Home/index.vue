@@ -50,38 +50,46 @@
     </div>
 
     <div class="complete-intro">
-      <div class="title">
-        <h3>About me</h3>
+
+      <div class="intro-container">
+        <div class="title">
+          <h3>About me</h3>
+          <div class="text">
+            <p>
+              Hi!
+            </p>
+          </div>
+        </div>
       </div>
-      <div class="text">
-        <p>
-          Madison Blackstone is a director of brand marketing, with experience
-          managing global teams and multi-million-dollar campaigns.
-        </p>
-      </div>
+      
+      
       <div class="info">
         <div class="list">
           <ul>
-            <li></li>
-            <li></li>
-            <li></li>
-          </ul>
-        </div>
-        <div class="list">
-          <ul>
-            <li></li>
-            <li></li>
-            <li></li>
+            <li><span>名字:</span>{{info.name}}</li>
+            <li><span>年齡:</span>{{info.age}}</li>
+            <li><span>生日:</span>{{info.birthday}}</li>
           </ul>
         </div>
       </div>
+
     </div>
+
   </header>
 </template>
 
 <script>
     export default {
-
+      name:'Home',
+      data(){
+        return {
+          info:{
+            name:'阮品毓',
+            age:26,
+            birthday:'1996/02',
+          }
+        }
+      }
     };
 </script>
 
@@ -301,7 +309,13 @@ header .complete-intro {
     height: 550px;
     display:flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: start;
+    
+}
+
+.complete-intro .intro-container {
+  margin-top:50px;
+  height: 200px;
 }
 
 header .complete-intro .title h3{
@@ -314,4 +328,26 @@ header .complete-intro .text p {
     font-size: 24px;
 }
 
+.info .list {
+  font-size: 1.2em;
+  color:rgb(68, 68, 68);
+  padding-top:5em;
+}
+
+.info .list li {
+  padding-bottom:0.7em;
+}
+
+.info .list li span{
+  font-weight: 600;
+  color:black;
+  padding-right:1em;
+}
+
+@media screen and (max-width:800px) {
+  .complete-intro .intro-container {
+    margin-top:80px;
+
+  }
+}
 </style>
