@@ -56,7 +56,12 @@
           <h3>About me</h3>
           <div class="text">
             <p>
-              Hi!
+              自學程式，
+              <span class="lineOne">擁有搜尋及自學能力！　</span>
+            </p>
+            <p>
+              享受學習，
+              <span class="lineTwo">樂於接受新技術　</span>
             </p>
           </div>
         </div>
@@ -87,8 +92,17 @@
             name:'阮品毓',
             age:26,
             birthday:'1996/02',
-          }
+          },
+          // opacity:1,
         }
+      },
+      mounted(){
+        // window.setInterval(()=>{
+        //   this.opacity -= 0.03
+        //   if(this.opacity<=0){
+        //     this.opacity = 1
+        //   }
+        // },50)
       }
     };
 </script>
@@ -324,8 +338,50 @@ header .complete-intro .title h3{
     font-weight: 900;
 }
 
+header .complete-intro .text {
+  margin-top : 1.5em;
+}
+
 header .complete-intro .text p {
-    font-size: 24px;
+    font-size: 1.5em;
+    margin-top:2em;
+}
+
+header .complete-intro .text .lineOne {
+    display:block;
+    width: 11.1em;/*根據文字字數調整*/
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typingAnimate 3s steps(11) /*根據文字字數調整*/ infinite,
+    cursor 0.8s steps(1) infinite;
+    border-right: 0.1em solid;
+    font-weight: 700;
+    color:rgb(95,72,33);
+
+}
+
+header .complete-intro .text .lineTwo {
+  display:block;
+  width: 8.1em;/*根據文字字數調整*/
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typingAnimate 3s steps(8) /*根據文字字數調整*/ infinite,
+  cursor 0.8s steps(1) infinite;
+  border-right: 0.1em solid;
+  font-weight: 700;
+  color:rgb(95,72,33);
+}
+
+@keyframes typingAnimate {
+  from {
+    width:0;
+  }
+}
+
+@keyframes cursor {
+  50% {
+    border-color:transparent;
+  }
 }
 
 .info .list {
@@ -347,7 +403,7 @@ header .complete-intro .text p {
 @media screen and (max-width:800px) {
   .complete-intro .intro-container {
     margin-top:80px;
-
   }
 }
+
 </style>
