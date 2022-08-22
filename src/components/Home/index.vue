@@ -57,7 +57,7 @@
           <div class="text">
             <p>
               自學程式，
-              <span class="lineOne">擁有搜尋及自學能力！　</span>
+              <span class="lineOne">擁有搜尋及自學能力！　</span> 
             </p>
             <p>
               享受學習，
