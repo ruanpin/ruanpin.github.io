@@ -15,7 +15,7 @@
                     <span class="warning" v-show="isEmailWarningShow">this is required</span><br>
 
 
-                    <input type="submit" value="送出" @click="handleSubmit">
+                    <input type="submit" value="留下聯絡方式" @click="handleSubmit">
                     <p class="warning sendingWarning" v-show="isSendingWarningShow">請填寫上方表格</p><br>
                 </form>
             </div>
@@ -82,25 +82,25 @@
             checkValue(e){
                 // 失去焦點時判斷input內是否有值-------------------
 
-                // 以下為name input框-------------------------------------------------------
-                if (e.target === this.$refs.nameInput && !this.$refs.nameInput.value) {
-                    // 判斷此次失去焦點事件是哪個input，且該input值為空時，讓warning字樣出現
-                    this.isNameWarningShow = true
-                }
-                if (e.target === this.$refs.nameInput && this.$refs.nameInput.value) {
-                    // 判斷此次失去焦點事件是哪個input，且該input有值時，讓warning字樣消失
-                    this.isNameWarningShow = false
+                // // 以下為name input框-------------------------------------------------------
+                // 判斷此次失去焦點事件是哪個input
+                if (e.target === this.$refs.nameInput) {
+                    if (this.$refs.nameInput.value){ //該input有值時，讓warning字樣消失
+                        this.isNameWarningShow = false
+                    } else { //該input值為空時，讓warning字樣出現
+                        this.isNameWarningShow = true
+                    }
                 }
 
 
                 // 以下為email input框-------------------------------------------------------
-                if (e.target === this.$refs.emailInput && !this.$refs.emailInput.value) {
-                    // 判斷此次失去焦點事件是哪個input，且該input值為空時，讓warning字樣出現
-                    this.isEmailWarningShow = true
-                }
-                if (e.target === this.$refs.emailInput && this.$refs.emailInput.value) {
-                    // 判斷此次失去焦點事件是哪個input，且該input有值時，讓warning字樣消失
-                    this.isEmailWarningShow = false
+                // 判斷此次失去焦點事件是哪個input
+                if (e.target === this.$refs.emailInput) {
+                    if (this.$refs.emailInput.value){ //該input有值時，讓warning字樣消失
+                        this.isEmailWarningShow = false
+                    } else { //該input值為空時，讓warning字樣出現
+                        this.isEmailWarningShow = true
+                    }
                 }
             }
         }
@@ -184,6 +184,7 @@
         font-weight: 700;
         width:100%;
         font-size: 1.2em;
+        color:#fff;
     }
 
     .warning {
