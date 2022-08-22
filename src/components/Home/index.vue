@@ -345,6 +345,7 @@ header .complete-intro .text {
 header .complete-intro .text p {
     font-size: 1.5em;
     margin-top:2em;
+    line-height: 1.2em;
 }
 
 header .complete-intro .text .lineOne {
