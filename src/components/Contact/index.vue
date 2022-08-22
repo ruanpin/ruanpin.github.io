@@ -16,6 +16,7 @@
 
 
                     <input type="submit" value="送出" @click="handleSubmit">
+                    <p class="warning sendingWarning" v-show="isSendingWarningShow">請填寫上方表格</p><br>
                 </form>
             </div>
             <transition name="formMsgShow">
@@ -35,6 +36,7 @@
                 FormMsg:'',
                 isNameWarningShow:false,
                 isEmailWarningShow:false,
+                isSendingWarningShow:false,
             }
         },
         watch:{
@@ -45,13 +47,35 @@
         },
         methods:{
             handleSubmit(e){
-                this.FormMsg = ''
-                e.preventDefault(); //未開Server時需要，否則會跳轉
-                this.FormMsg = 'Thank you for contacting, I will reply to you as soon as possible !'
-                setTimeout(() => {
-                    this.$refs.nameInput.value = ""
-                    this.$refs.emailInput.value = ""
-                }, 10);
+                if (this.$refs.nameInput.value && this.$refs.emailInput.value) {
+                    this.FormMsg = ''
+                    e.preventDefault(); //未開Server時需要，否則會跳轉
+                    this.FormMsg = 'Thank you for contacting, I will reply to you as soon as possible !'
+                    setTimeout(() => {
+                        this.$refs.nameInput.value = ""
+                        this.$refs.emailInput.value = ""
+                    }, 10);
+                    this.isSendingWarningShow = false
+                } else {
+                    e.preventDefault();
+                    if (!this.$refs.nameInput.value) {
+                        // 若有input值為空時，讓warning字樣出現
+                        this.isNameWarningShow = true
+                        this.$refs.nameInput.focus();
+                    }
+                    if (!this.$refs.emailInput.value) {
+                        // 判斷此次失去焦點事件是哪個input，且該input值為空時，讓warning字樣出現
+                        this.isEmailWarningShow = true
+                        this.$refs.emailInput.focus();
+                    }
+
+                    if (!this.$refs.nameInput.value && !this.$refs.emailInput.value){
+                        this.$refs.nameInput.focus();
+                    }
+                    this.isSendingWarningShow = true;
+                    this.FormMsg = false;
+                }
+                
                     
             },
             checkValue(e){
@@ -114,6 +138,7 @@
         padding:2em;
         background-color: rgb(192, 209, 160);
         border-radius: 2em;
+        position : relative;
     }
 
     form p {
@@ -161,6 +186,17 @@
     .warning {
         color:rgb(220,53,69);
         line-height: 1.8em;
+    }
+
+    .sendingWarning {
+        text-align: center;
+        padding:0em;
+        letter-spacing: 0;
+        font-size: 1em;
+        position : absolute;
+        bottom:1.5em;
+        left:50%;
+        transform: translateX(-50%);
     }
     
     @keyframes showUp {
