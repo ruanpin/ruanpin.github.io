@@ -19,7 +19,7 @@
                     <p class="warning sendingWarning" v-show="isSendingWarningShow">請填寫上方表格</p><br>
                 </form>
             </div>
-            <transition name="formMsgShow">
+            <transition name="formMsgShow"> 
                 <div v-show="FormMsg">{{FormMsg}}</div> 
             </transition>
         </div>
