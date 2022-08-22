@@ -64,7 +64,7 @@
       
       
       <div class="info">
-        <div class="list">
+        <div class="list"> 
           <ul>
             <li><span>名字:</span>{{info.name}}</li>
             <li><span>年齡:</span>{{info.age}}</li>
