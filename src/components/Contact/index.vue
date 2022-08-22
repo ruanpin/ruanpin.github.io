@@ -66,7 +66,7 @@
                     if (!this.$refs.emailInput.value) {
                         // 判斷此次失去焦點事件是哪個input，且該input值為空時，讓warning字樣出現
                         this.isEmailWarningShow = true
-                        this.$refs.emailInput.focus();
+                        this.$refs.emailInput.focus(); 
                     }
 
                     if (!this.$refs.nameInput.value && !this.$refs.emailInput.value){
