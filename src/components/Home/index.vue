@@ -404,6 +404,15 @@ header .complete-intro .text .lineTwo {
   .complete-intro .intro-container {
     margin-top:80px;
   }
+
+  /* header .complete-intro .text .lineOne {
+    width: 11.5em;
+
+  }
+
+  header .complete-intro .text .lineTwo {
+    width: 8.5em;
+  } */
 }
 
 </style>
