@@ -8,7 +8,7 @@
             <div class="container">
                 <form method="POST" action="http://127.0.0.1:5000/testPost" class="contact-form">
                     <p>Keep in touch</p>
-                    <label>姓名<br><input type="text" placeholder="請輸入姓名" name="username" ref="nameInput" value="" @blur="checkValue"></label>
+                    <label>名字<br><input type="text" placeholder="請輸入名字" name="username" ref="nameInput" value="" @blur="checkValue"></label>
                     <span class="warning" v-show="isNameWarningShow">this is required</span><br>
 
                     <label>信箱<br><input type="email" placeholder="請輸入信箱" name="useremail" ref="emailInput" value="" @blur="checkValue"></label>
@@ -64,12 +64,13 @@
                         this.$refs.nameInput.focus();
                     }
                     if (!this.$refs.emailInput.value) {
-                        // 判斷此次失去焦點事件是哪個input，且該input值為空時，讓warning字樣出現
+                        // 若有input值為空時，讓warning字樣出現
                         this.isEmailWarningShow = true
                         this.$refs.emailInput.focus(); 
                     }
 
                     if (!this.$refs.nameInput.value && !this.$refs.emailInput.value){
+                        // 若Name 和 email input值皆為空，則Name input 獲取焦點
                         this.$refs.nameInput.focus();
                     }
                     this.isSendingWarningShow = true;
@@ -79,6 +80,8 @@
                     
             },
             checkValue(e){
+                // 失去焦點時判斷input內是否有值-------------------
+
                 // 以下為name input框-------------------------------------------------------
                 if (e.target === this.$refs.nameInput && !this.$refs.nameInput.value) {
                     // 判斷此次失去焦點事件是哪個input，且該input值為空時，讓warning字樣出現
