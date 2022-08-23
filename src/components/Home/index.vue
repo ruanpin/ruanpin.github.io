@@ -61,7 +61,7 @@
         <div class="fixed-text">HI</div>
         <div class="dynamic-text-container">
           <div class="dynamic-div-container">
-            <div class="dynamic-text">It's me000000000001</div>
+            <div class="dynamic-text">It's me00001</div>
             <div class="dynamic-text">it's me 2</div>
             <div class="dynamic-text">it's me 3</div>
           </div>
@@ -389,6 +389,15 @@ header .complete-intro .title h3{
   }
 }
 
+@-webkit-keyframes typingEffect {
+  40%, 60% {
+    transform: translateX(100%)
+  }
+  100% {
+    transform: translateX(0)
+  }
+}
+
 @keyframes cursorBlinks {
   0% {
     border-left: 4px solid rgb(95, 72, 33);
@@ -398,7 +407,26 @@ header .complete-intro .title h3{
   }
 }
 
+@-webkit-keyframes cursorBlinks {
+  0% {
+    border-left: 4px solid rgb(95, 72, 33);
+  }
+  100% {
+    border-left: 4px solid transparent;
+  }
+}
+
 @keyframes moveText {
+  0% {
+    transform: translateY(0)
+  }
+  100% {
+    transform: translateY(-90px)
+    
+  }
+}
+
+@-webkit-keyframes moveText {
   0% {
     transform: translateY(0)
   }
