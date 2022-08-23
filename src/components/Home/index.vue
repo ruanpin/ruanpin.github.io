@@ -352,6 +352,7 @@ header .complete-intro .title h3{
   /* padding: 30px; */
   font-size: 30px;
   display: flex;
+  flex-direction: column;
   width: 100%;
   /* height:30px; */
   /* overflow: hidden; */
@@ -365,7 +366,7 @@ header .complete-intro .title h3{
   top:0;
   height:30px;
   overflow: hidden;
-  margin-left: 0.7em;
+  /* margin-left: 0.7em; */
 }
 
 .dynamic-text-container::after {
