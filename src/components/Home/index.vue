@@ -54,20 +54,24 @@
       <div class="intro-container">
         <div class="title">
           <h3>About me</h3>
-          <div class="text">
-            <p>
-              自學程式，
-              <span class="lineOne">擁有搜尋及自學能力！　</span> 
-            </p>
-            <p>
-              享受學習，
-              <span class="lineTwo">樂於接受新技術　</span>
-            </p>
-          </div>
         </div>
       </div>
       
-      
+      <div class="text-container">
+        <div class="fixed-text">HI</div>
+        <div class="dynamic-text-container">
+          <!-- It's me<br>
+          It's me2 <br>
+          It's me3 <br> -->
+          <div class="test">
+            <div class="dynamic-text">It's me</div>
+            <div class="dynamic-text">it's me 2</div>
+            <div class="dynamic-text">it's me 3</div>
+          </div>
+          
+        </div>
+      </div>
+
       <div class="info">
         <div class="list"> 
           <ul>
@@ -338,53 +342,48 @@ header .complete-intro .title h3{
     font-weight: 900;
 }
 
-header .complete-intro .text {
-  margin-top : 1.5em;
+/* --------------------------------------------------------------------- */
+
+.fixed-text{
+  height: 30px;
+  position: relative;
 }
 
-header .complete-intro .text p {
-    font-size: 1.5em;
-    margin-top:2em;
-    line-height: 1.2em;
+.text-container {
+  padding: 30px;
+  font-size: 30px;
+  display: flex;
+  width: 500px;
+  /* height:30px; */
+  /* overflow: hidden; */
+  position: relative;
 }
 
-header .complete-intro .text .lineOne {
-    display:block;
-    width: 11.1em;/*根據文字字數調整*/
-    overflow: hidden;
-    white-space: nowrap;
-    animation: typingAnimate 3s steps(11) /*根據文字字數調整*/ infinite,
-    cursor 0.8s steps(1) infinite;
-    border-right: 0.1em solid;
-    font-weight: 700;
-    color:rgb(95,72,33);
+.dynamic-text-container {
+  position: relative;
+  top:0;
+  height:30px;
+  /* overflow: hidden; */
+
+  /* animation: moveText 9s step(3) infinite; */
+}
+
+.test {
+  animation: moveText 3s step(3) infinite;
 
 }
 
-header .complete-intro .text .lineTwo {
-  display:block;
-  width: 8.1em;/*根據文字字數調整*/
-  overflow: hidden;
-  white-space: nowrap;
-  animation: typingAnimate 3s steps(8) /*根據文字字數調整*/ infinite,
-  cursor 0.8s steps(1) infinite;
-  border-right: 0.1em solid;
-  font-weight: 700;
-  color:rgb(95,72,33);
-}
-
-@keyframes typingAnimate {
-  from {
-    width:0;
+@keyframes moveText {
+  0% {
+    transform: translateY(0)
+  }
+  100% {
+    transform: translateY(-90px)
+    
   }
 }
 
-@keyframes cursor {
-  50% {
-    border-color:transparent;
-  }
-}
-
+/* ------------------------------------------------------------------------ */
 .info .list {
   font-size: 1.2em;
   color:rgb(68, 68, 68);
