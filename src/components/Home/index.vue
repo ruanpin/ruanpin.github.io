@@ -60,11 +60,8 @@
       <div class="text-container">
         <div class="fixed-text">HI</div>
         <div class="dynamic-text-container">
-          <!-- It's me<br>
-          It's me2 <br>
-          It's me3 <br> -->
-          <div class="test">
-            <div class="dynamic-text">It's me</div>
+          <div class="dynamic-div-container">
+            <div class="dynamic-text">It's me00000000000</div>
             <div class="dynamic-text">it's me 2</div>
             <div class="dynamic-text">it's me 3</div>
           </div>
@@ -363,14 +360,42 @@ header .complete-intro .title h3{
   position: relative;
   top:0;
   height:30px;
-  /* overflow: hidden; */
-
-  /* animation: moveText 9s step(3) infinite; */
+  overflow: hidden;
+  margin-left: 0.7em;
 }
 
-.test {
-  animation: moveText 3s step(3) infinite;
+.dynamic-text-container::after {
+  content:'';
+  width:100%;
+  height:100%;
+  background-color: #fff;
+  position:absolute;
+  left:0;
+  top:0;
+  animation: typingEffect 3s steps(20) infinite,
+  cursorBlinks 0.5s steps(20) infinite;
+}
 
+.dynamic-div-container {
+  animation: moveText 9s steps(3) infinite;
+}
+
+@keyframes typingEffect {
+  40%, 60% {
+    transform: translateX(100%)
+  }
+  100% {
+    transform: translateX(0)
+  }
+}
+
+@keyframes cursorBlinks {
+  0% {
+    border-left: 4px solid rgb(95, 72, 33);
+  }
+  100% {
+    border-left: 4px solid transparent;
+  }
 }
 
 @keyframes moveText {
