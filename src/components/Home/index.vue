@@ -344,7 +344,7 @@ header .complete-intro .title h3{
 .fixed-text{
   height: 30px;
   position: relative;
-  margin-bottom:0.5em;
+  /* margin-bottom:0.5em; */
 }
 
 .text-container {
@@ -469,14 +469,14 @@ header .complete-intro .title h3{
     margin-top:80px;
   }
 
-  .dynamic-text-container {
+  /* .dynamic-text-container {
     margin-left:0;
   }
 
   .text-container {
     flex-direction: column;
     padding:0;
-  }
+  } */
 
   /* .header .complete-intro {
     width: 100%;
