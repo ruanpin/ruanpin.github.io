@@ -350,7 +350,7 @@ header .complete-intro .title h3{
   padding: 30px;
   font-size: 30px;
   display: flex;
-  /* width: 500px; */
+  width: 100%;
   /* height:30px; */
   /* overflow: hidden; */
   position: relative;
