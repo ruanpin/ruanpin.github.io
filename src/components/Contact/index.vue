@@ -62,6 +62,8 @@
                     if (!this.$refs.nameInput.value && !this.$refs.emailInput.value){
                         // 若Name 和 email input值皆為空，則Name input 獲取焦點
                         this.$refs.nameInput.focus();
+                        this.isNameWarningShow = true
+                        this.isEmailWarningShow = true
                     } else {
                         if (!this.$refs.nameInput.value) {
                             // 若有input值為空時，讓warning字樣出現
