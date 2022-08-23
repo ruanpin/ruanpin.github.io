@@ -61,9 +61,9 @@
         <div class="fixed-text">HI</div>
         <div class="dynamic-text-container">
           <div class="dynamic-div-container">
-            <div class="dynamic-text">It's me00001</div>
+            <div class="dynamic-text">It's me 1</div>
             <div class="dynamic-text">it's me 2</div>
-            <div class="dynamic-text">it's me 3</div>
+            <!-- <div class="dynamic-text">it's me 3</div> -->
           </div>
           
         </div>
@@ -350,7 +350,7 @@ header .complete-intro .title h3{
   padding: 30px;
   font-size: 30px;
   display: flex;
-  width: 500px;
+  /* width: 500px; */
   /* height:30px; */
   /* overflow: hidden; */
   position: relative;
@@ -372,12 +372,13 @@ header .complete-intro .title h3{
   position:absolute;
   left:0;
   top:0;
-  animation: typingEffect 3s steps(20) infinite,
-  cursorBlinks 0.5s steps(20) infinite;
+  border-left:black 2px solid;
+  animation: typingEffect 3s steps(20) infinite;
+  /* cursorBlinks 1s steps(20) infinite; */
 }
 
 .dynamic-div-container {
-  animation: moveText 9s steps(3) infinite;
+  animation: moveText 6s steps(2) infinite;
 }
 
 @keyframes typingEffect {
@@ -398,7 +399,7 @@ header .complete-intro .title h3{
   }
 }
 
-@keyframes cursorBlinks {
+/* @keyframes cursorBlinks {
   0% {
     border-left: 4px solid rgb(95, 72, 33);
   }
@@ -414,14 +415,14 @@ header .complete-intro .title h3{
   100% {
     border-left: 4px solid transparent;
   }
-}
+} */
 
 @keyframes moveText {
   0% {
     transform: translateY(0)
   }
   100% {
-    transform: translateY(-90px)
+    transform: translateY(-60px)
     
   }
 }
@@ -458,6 +459,9 @@ header .complete-intro .title h3{
     margin-top:80px;
   }
 
+  .header .complete-intro {
+    width: 50vw;
+  }
   /* header .complete-intro .text .lineOne {
     width: 11.5em;
 
