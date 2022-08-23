@@ -1,6 +1,7 @@
 <template>
     <div id="experience">
         <div class="title">
+            <div class="title-decoration"></div>
             <h2>Experience</h2>
         </div>
         <transition name="showup">
@@ -56,6 +57,42 @@
         margin-bottom: 36px;
         color:rgb(95, 72, 33);
         font-weight: 700;
+    }
+
+/* -----------------------------小圓球 */
+    .title {
+        position:relative;
+    }
+
+    .title-decoration {
+        position: absolute;
+        width:4em;
+        height: 4em;
+        left:80%;
+        top:-50%;
+        border-radius: 50%;
+        background-color: rgb(87, 128, 11);
+        opacity: 0.3;
+        animation: titleDec 10s infinite;
+    }
+
+
+    @keyframes titleDec {
+        45%,55%{
+            transform: translateX(-50%);
+        }
+        100% {
+            transform: translateX(0%);
+        }
+    }
+
+    @-webkit-keyframes titleDec {
+        45%,55%{
+            transform: translateX(-50%)
+        }
+        100% {
+            transform: translateX(0%)
+        }
     }
 
     .exp-container {
