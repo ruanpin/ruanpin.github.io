@@ -58,11 +58,11 @@
       </div>
       
       <div class="text-container">
-        <div class="fixed-text">HI</div>
+        <div class="fixed-text">自學程式，</div>
         <div class="dynamic-text-container">
           <div class="dynamic-div-container">
-            <div class="dynamic-text">It's me 1</div>
-            <div class="dynamic-text">it's me 2</div>
+            <div class="dynamic-text">擁有搜尋及自學能力</div>
+            <div class="dynamic-text">樂於接觸新技術！</div>
             <!-- <div class="dynamic-text">it's me 3</div> -->
           </div>
           
@@ -330,7 +330,7 @@ header .complete-intro {
 
 .complete-intro .intro-container {
   margin-top:50px;
-  height: 200px;
+  /* height: 200px; */
 }
 
 header .complete-intro .title h3{
@@ -344,10 +344,12 @@ header .complete-intro .title h3{
 .fixed-text{
   height: 30px;
   position: relative;
+  margin-bottom:0.5em;
 }
 
 .text-container {
-  padding: 30px;
+  margin:3em auto;
+  /* padding: 30px; */
   font-size: 30px;
   display: flex;
   width: 100%;
@@ -355,6 +357,8 @@ header .complete-intro .title h3{
   /* overflow: hidden; */
   position: relative;
 }
+
+
 
 .dynamic-text-container {
   position: relative;
@@ -375,6 +379,11 @@ header .complete-intro .title h3{
   border-left:black 2px solid;
   animation: typingEffect 3s steps(20) infinite;
   /* cursorBlinks 1s steps(20) infinite; */
+}
+
+.dynamic-text {
+  color:rgb(95, 72, 33);
+  font-weight: 700;
 }
 
 .dynamic-div-container {
@@ -459,9 +468,18 @@ header .complete-intro .title h3{
     margin-top:80px;
   }
 
-  .header .complete-intro {
-    width: 50vw;
+  .dynamic-text-container {
+    margin-left:0;
   }
+
+  .text-container {
+    flex-direction: column;
+    padding:0;
+  }
+
+  /* .header .complete-intro {
+    width: 100%;
+  } */
   /* header .complete-intro .text .lineOne {
     width: 11.5em;
 
