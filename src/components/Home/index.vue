@@ -432,7 +432,7 @@ header .complete-intro .title h3{
     transform: translateY(0)
   }
   100% {
-    transform: translateY(-90px)
+    transform: translateY(-60px)
     
   }
 }
