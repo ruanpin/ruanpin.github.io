@@ -324,7 +324,7 @@ header .complete-intro {
     height: 550px;
     display:flex;
     flex-direction: column;
-    justify-content: start;
+    justify-content: flex-start;
     
 }
 
