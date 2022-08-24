@@ -432,8 +432,7 @@ header .complete-intro .title h3{
     transform: translateY(0)
   }
   100% {
-    transform: translateY(-60px)
-    
+    transform: translateY(-100%)
   }
 }
 
@@ -442,7 +441,7 @@ header .complete-intro .title h3{
     transform: translateY(0)
   }
   100% {
-    transform: translateY(-60px)
+    transform: translateY(-100%)
     
   }
 }
