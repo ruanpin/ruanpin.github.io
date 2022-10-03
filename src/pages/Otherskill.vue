@@ -1,6 +1,6 @@
 <template>
     <div>
-      Git, Github, Webpack, npm
+      Git, Github, Webpack,<br>npm, Postman, MongoDB,<br> Mock.js
     </div>
 </template>
 
