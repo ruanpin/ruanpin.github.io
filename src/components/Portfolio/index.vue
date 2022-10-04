@@ -17,12 +17,12 @@
                         <div class="description">
                             <h2><span>電子商務網站</span></h2>
                             <div class="intro">
-                                <p class="text">技術簡介 : 串接第三方API (Instagram)、前端頁面呈現 (Vue)、串接/撰寫後端伺服器API (Express)、資料庫增刪查改CRUD (註冊/登入系統、會員訂單查詢、購物車功能、下訂單功能)</p>
+                                <p class="text"><span class="intro-title">技術簡介</span> 串接第三方API (Instagram)、前端頁面呈現 (Vue)、串接/撰寫後端伺服器API (Express)、資料庫增刪查改CRUD (註冊/登入系統、會員訂單查詢、購物車功能、下訂單功能)</p>
                                 <ul class="list">
-                                    <li>前端 : Vue.js + VueX + VueRouter + SCSS + Axios + Mock.js..等</li>
-                                    <li>後端 : Node.js + Express + Mongoose</li>
-                                    <li>資料庫 : MongoDB</li>
-                                    <li>版本控制 : Git + Github</li>
+                                    <li><span class="intro-title">前端</span> Vue.js + VueX + VueRouter + SCSS + Axios + Mock.js..等</li>
+                                    <li><span class="intro-title">後端</span> Node.js + Express + Mongoose</li>
+                                    <li><span class="intro-title">資料庫</span> MongoDB</li>
+                                    <li><span class="intro-title">版本控制</span> Git + Github</li>
                                 </ul>
                             </div>
                             
@@ -100,7 +100,7 @@
     #portfolio {
         width: 100%;
         /* background-color: skyblue; */
-        height: 950px;
+        height: 1050px;
         margin : 33px auto;
     }
 
@@ -120,8 +120,10 @@
         margin:auto;
     }
 
+
+
     .description {
-        font-size:1.2rem;
+        font-size:1.3rem;
         line-height: 1.8rem;  
         margin-top:1.5rem;  
         display:flex;
@@ -130,16 +132,30 @@
     }
     .description h2 {
         text-align: center;
-        margin-bottom:1.2rem;  
     }
-    .description h2 span{
+    .description h2 span, span{
         font-weight: 700;
         font-size:1.45rem;
         padding : 0.2em 0.8em;
         background-color: rgb(77,95,44);
         border-radius: 1em;
         color:#fff;
+    }
+    .intro-title {
+        font-weight: 700;
+        background-color: rgb(164, 173, 143);
+        color:black;
+        font-size:1.3rem;
+    }
 
+    .description .intro .text {
+        margin: 1.4rem 0;
+        line-height: 2.5rem;
+    }
+
+    .description .intro .list li{
+        margin: 0.3rem 0;        
+        line-height: 2.5rem;
     }
 /* -----------------------------小圓球 */
     .title {
@@ -199,13 +215,13 @@
 
     #mySwiper{
         width: 80%;
-        height: 800px;
+        height: 950px;
         background-color: aquamarine;
         border-radius: 35px;
     }
 
     .swiper-slide.swiper_slide_item{
-        height: 800px;
+        height: 950px;
         background-color:rgb(245,235,216);
         padding:1.5em;
 
