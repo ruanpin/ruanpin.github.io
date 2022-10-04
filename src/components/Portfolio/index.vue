@@ -12,8 +12,8 @@
                 <swiper :options="swiperOption" id="mySwiper">
 
                     <!-- 輪播圖分頁 -->
-                    <swiper-slide class="swiper_slide_item slide1">
-                        <img class="img1" src="/Portfolio/ProductSearch.PNG" alt="e-commercial website">
+                    <swiper-slide class="swiper_slide_item slide">
+                        <img class="img" src="/Portfolio/ProductSearch.PNG" alt="e-commercial website">
                         <div class="description">
                             <h2><span>電子商務網站</span></h2>
                             <div class="intro">
@@ -26,11 +26,22 @@
                                 </ul>
                             </div>
                         </div>
-                        <p class="btn-container"><a class="btn" href="https://github.com/ruanpin/e-commercial" target="_blank">前往Github</a></p>
+                        <p class="btn-container"><a class="btn" href="https://github.com/ruanpin/e-commercial" target="_blank"><i class="fa-brands fa-github" style="margin-right:0.5rem"></i>前往Github</a></p>
                     </swiper-slide>
-                    <!-- <swiper-slide class="swiper_slide_item slide1">
-                        <img class="img1" src="/Portfolio/ProductSearch.PNG" alt="personal website">                        
-                    </swiper-slide> -->
+                    <swiper-slide class="swiper_slide_item slide">
+                        <img class="img" src="/Portfolio/personal_website.PNG" alt="personal website">
+                        <div class="description">
+                            <h2><span>個人網站</span></h2>
+                            <div class="intro">
+                                <p class="text"><span class="intro-title">技術簡介</span> 前端頁面呈現 (Vue.js)</p>
+                                <ul class="list">
+                                    <li><span class="intro-title">前端</span> Vue.js + VueX + VueRouter</li>
+                                    <li><span class="intro-title">版本控制</span> Git + Github</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <p class="btn-container"><a class="btn" href="https://github.com/ruanpin/ruanpin.github.io" target="_blank"><i class="fa-brands fa-github" style="margin-right:0.5rem"></i>前往Github</a></p>
+                    </swiper-slide>
                     <!-- <swiper-slide class="swiper_slide_item">
                         Slide 3
                     </swiper-slide> -->
@@ -110,10 +121,10 @@
         font-weight: 700;
     }
 
-    .slide1 {
+    .slide {
         width: 90%;
     }
-    .img1 {
+    .img {
         width: 90%;
         display: block;
         margin:auto;
