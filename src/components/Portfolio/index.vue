@@ -25,9 +25,8 @@
                                     <li><span class="intro-title">版本控制</span> Git + Github</li>
                                 </ul>
                             </div>
-                            
                         </div>
-                        
+                        <p class="btn-container"><a class="btn" href="https://github.com/ruanpin/e-commercial" target="_blank">前往Github</a></p>
                     </swiper-slide>
                     <!-- <swiper-slide class="swiper_slide_item slide1">
                         <img class="img1" src="/Portfolio/ProductSearch.PNG" alt="personal website">                        
@@ -100,7 +99,7 @@
     #portfolio {
         width: 100%;
         /* background-color: skyblue; */
-        height: 1050px;
+        height: 1100px;
         margin : 33px auto;
     }
 
@@ -156,6 +155,20 @@
     .description .intro .list li{
         margin: 0.3rem 0;        
         line-height: 2.5rem;
+    }
+
+    .btn-container {
+        text-align: center;
+        margin:1.4rem 0;
+    }
+
+    .btn {
+        background-color: rgb(101,122,141);
+        padding : 0.5rem 1rem;
+        color :#fff;
+        font-size:1.4rem;
+        font-weight: 700;
+        border-radius: 1.5rem;;
     }
 /* -----------------------------小圓球 */
     .title {
@@ -215,13 +228,13 @@
 
     #mySwiper{
         width: 80%;
-        height: 950px;
+        height: 1020px;
         background-color: aquamarine;
         border-radius: 35px;
     }
 
     .swiper-slide.swiper_slide_item{
-        height: 950px;
+        height: 1020px;
         background-color:rgb(245,235,216);
         padding:1.5em;
 
@@ -240,6 +253,16 @@
     @media screen and (max-width:800px) {
         #mySwiper {
             width: 98%;
+        }
+        .btn-container {
+            margin:2.2rem 0;
+        }
+        #mySwiper{
+            height: 970px;
+        }
+
+        .swiper-slide.swiper_slide_item{
+            height: 970px;
         }
     }
 
