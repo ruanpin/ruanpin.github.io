@@ -12,15 +12,29 @@
                 <swiper :options="swiperOption" id="mySwiper">
 
                     <!-- 輪播圖分頁 -->
-                    <swiper-slide class="swiper_slide_item">
-                        Slide 1
+                    <swiper-slide class="swiper_slide_item slide1">
+                        <img class="img1" src="/Portfolio/ProductSearch.PNG" alt="e-commercial website">
+                        <div class="description">
+                            <h2><span>電子商務網站</span></h2>
+                            <div class="intro">
+                                <p class="text">技術簡介 : 串接第三方API (Instagram)、前端頁面呈現 (Vue)、串接/撰寫後端伺服器API (Express)、資料庫增刪查改CRUD (註冊/登入系統、會員訂單查詢、購物車功能、下訂單功能)</p>
+                                <ul class="list">
+                                    <li>前端 : Vue.js + VueX + VueRouter + SCSS + Axios + Mock.js..等</li>
+                                    <li>後端 : Node.js + Express + Mongoose</li>
+                                    <li>資料庫 : MongoDB</li>
+                                    <li>版本控制 : Git + Github</li>
+                                </ul>
+                            </div>
+                            
+                        </div>
+                        
                     </swiper-slide>
-                    <swiper-slide class="swiper_slide_item">
-                        Slide 2
-                    </swiper-slide>
-                    <swiper-slide class="swiper_slide_item">
+                    <!-- <swiper-slide class="swiper_slide_item slide1">
+                        <img class="img1" src="/Portfolio/ProductSearch.PNG" alt="personal website">                        
+                    </swiper-slide> -->
+                    <!-- <swiper-slide class="swiper_slide_item">
                         Slide 3
-                    </swiper-slide>
+                    </swiper-slide> -->
 
                     <!-- 下方動態小圓點 -->
                     <div class="swiper-pagination" slot="pagination"></div>
@@ -86,7 +100,7 @@
     #portfolio {
         width: 100%;
         /* background-color: skyblue; */
-        height: 600px;
+        height: 950px;
         margin : 33px auto;
     }
 
@@ -95,6 +109,37 @@
         margin-bottom: 36px;
         color:rgb(95, 72, 33);
         font-weight: 700;
+    }
+
+    .slide1 {
+        width: 90%;
+    }
+    .img1 {
+        width: 90%;
+        display: block;
+        margin:auto;
+    }
+
+    .description {
+        font-size:1.2rem;
+        line-height: 1.8rem;  
+        margin-top:1.5rem;  
+        display:flex;
+        flex-direction: column;
+        
+    }
+    .description h2 {
+        text-align: center;
+        margin-bottom:1.2rem;  
+    }
+    .description h2 span{
+        font-weight: 700;
+        font-size:1.45rem;
+        padding : 0.2em 0.8em;
+        background-color: rgb(77,95,44);
+        border-radius: 1em;
+        color:#fff;
+
     }
 /* -----------------------------小圓球 */
     .title {
@@ -154,13 +199,13 @@
 
     #mySwiper{
         width: 80%;
-        height: 450px;
+        height: 800px;
         background-color: aquamarine;
         border-radius: 35px;
     }
 
     .swiper-slide.swiper_slide_item{
-        height: 450px;
+        height: 800px;
         background-color:rgb(245,235,216);
         padding:1.5em;
 
