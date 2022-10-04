@@ -86,7 +86,7 @@
                     speed: 1000, // 切換時速度
                     autoplay: {
                         delay: 5000, // 每頁停留多久
-                        disableOnInteraction: false, // 使用者操作後，會不會停止自動撥放功能
+                        disableOnInteraction: true, // 使用者操作後，會不會停止自動撥放功能
                         stopOnLastSlide: true, // true:當轉到最後一頁便不會再轉動(loop:true時無效)
                     },
                     // on: {
