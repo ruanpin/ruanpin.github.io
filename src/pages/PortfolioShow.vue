@@ -1,13 +1,11 @@
 <template>
   <div class="PortfolioShow-container">
-    <a class="backPage" @click="goBackBTN">回上頁</a>
+    <a class="backPage" href="https://www.ruanpin23.com">回上頁</a>
     <div class="imgs">
       <div ref="imgRef" class="img-container" v-for="(imgsrc,index) in srcArr" :key="index" @click="zoomInImg(index)">
         <div class="closeBtn" @click="zoomOutImg(index,$event)" v-show="isCloseShow"><i class="fa-solid fa-xmark"></i></div>
         <img class="eachImg" :src="`/portfolioScreenShot/${imgsrc}`" alt="portfolioScreenShot">
-        
       </div>
-      
     </div>
     <div class="description">
       <h2><span>電子商務網站</span></h2>
@@ -66,6 +64,7 @@
     display:flex;
     width: 100%;
     margin:2em 0;
+    height: 100%;
   }
 
 
@@ -74,6 +73,7 @@
     flex-direction: column;
     flex-wrap: wrap;
     width: 50%;
+    height: 100%;
     margin-top:2rem;
   }
   .img-container {
@@ -84,6 +84,7 @@
     filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.3));
     background-color: rgb(236, 236, 236);
     cursor:pointer;
+    height: 100%;
   }
 
 
@@ -155,7 +156,6 @@
   .description .intro .list li{
       margin: 0.3rem 0;        
       line-height: 2.5rem;
-
   }
 
   .backPage {
@@ -175,13 +175,25 @@
   @media screen and (max-width:800px) {
     .imgs {
       width: 100%;
+      height: 100%;
+      position: relative;
+    }
+    .imgs::after {
+      /* 讓移動裝置無法觸發zoomIn 新增其他class */
+      content: '';
+      position:absolute;
+      z-index: 20;
+      width: 100%;
+      height: 100%;
+      background-color: rgb(230, 230, 230);
+      opacity: 0;
+      overflow: hidden;
     }
 
     .backPage {
       top:0;
       left:15%;
       margin:0 auto;
-      /* transform: translate(50%,50%); */
     }
 
     .PortfolioShow-container {

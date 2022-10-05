@@ -279,11 +279,11 @@
             margin:2.2rem 0;
         }
         #mySwiper{
-            height: 970px;
+            height: 1050px;
         }
 
         .swiper-slide.swiper_slide_item{
-            height: 970px;
+            height: 1050px;
         }
     }
 
