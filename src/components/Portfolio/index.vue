@@ -27,6 +27,7 @@
                             </div>
                         </div>
                         <p class="btn-container"><a class="btn" href="https://github.com/ruanpin/e-commercial" target="_blank"><i class="fa-brands fa-github" style="margin-right:0.5rem"></i>前往Github</a></p>
+                        <p class="btn-container"><a class="btn" @click="goPortfolioShow">前往網站介紹</a></p>
                     </swiper-slide>
                     <swiper-slide class="swiper_slide_item slide">
                         <img class="img" src="/Portfolio/personal_website.PNG" alt="personal website">
@@ -103,6 +104,13 @@
                 this.isshow = this.$store.state.itemNumber>=1
             }
         },
+        methods:{
+            goPortfolioShow(){
+                this.$router.push({
+                    name:'PortfolioShow'
+                })
+            }
+        }
     }
 </script>
 
@@ -110,7 +118,7 @@
     #portfolio {
         width: 100%;
         /* background-color: skyblue; */
-        height: 1100px;
+        height: 1180px;
         margin : 33px auto;
     }
 
@@ -171,6 +179,8 @@
     .btn-container {
         text-align: center;
         margin:1.4rem 0;
+        margin-bottom:2.5rem;
+        cursor:pointer;
     }
 
     .btn {
@@ -239,13 +249,13 @@
 
     #mySwiper{
         width: 80%;
-        height: 1020px;
+        height: 1100px;
         background-color: aquamarine;
         border-radius: 35px;
     }
 
     .swiper-slide.swiper_slide_item{
-        height: 1020px;
+        height: 1100px;
         background-color:rgb(245,235,216);
         padding:1.5em;
 

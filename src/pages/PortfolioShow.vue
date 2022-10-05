@@ -1,5 +1,6 @@
 <template>
   <div class="PortfolioShow-container">
+    <a class="backPage" @click="goBackBTN">回上頁</a>
     <div class="imgs">
       <div ref="imgRef" class="img-container" v-for="(imgsrc,index) in srcArr" :key="index" @click="zoomInImg(index)">
         <div class="closeBtn" @click="zoomOutImg(index,$event)" v-show="isCloseShow"><i class="fa-solid fa-xmark"></i></div>
@@ -11,6 +12,13 @@
     <div class="description">
       <h2><span>電子商務網站</span></h2>
       <p class="text"><span class="intro-title">技術簡介</span> 串接第三方API (Instagram)、前端頁面呈現 (Vue)、串接/撰寫後端伺服器API (Express)、資料庫增刪查改CRUD (註冊/登入系統、會員訂單查詢、購物車功能、下訂單功能)</p>
+      <ul class="list">
+          <li><span class="intro-title page-intro">首頁</span> Banner、最新產品、Instagram貼文(串接第三方API)</li>
+          <li><span class="intro-title page-intro">產品頁</span> 關鍵字搜尋產品、加入購物車功能、分頁器</li>
+          <li><span class="intro-title page-intro">關於頁</span> 動畫效果</li>
+          <li><span class="intro-title page-intro">購物車頁</span> 購物車刪查改、下訂單功能(串接後端API及資料庫)</li>
+          <li><span class="intro-title page-intro">會員頁</span> 會員註冊/登入功能(串接後端API及資料庫)、會員查詢訂單功能(串接後端API及資料庫)</li>
+      </ul>
       <ul class="list">
           <li><span class="intro-title">前端</span> Vue.js + VueX + VueRouter + SCSS + Axios + Mock.js..等</li>
           <li><span class="intro-title">後端</span> Node.js + Express + Mongoose</li>
@@ -45,6 +53,9 @@
           this.isCloseShow = false
         }
         $event.stopPropagation()
+      },
+      goBackBTN(){
+        this.$router.go(-1)
       }
     }
   }
@@ -54,13 +65,16 @@
   .PortfolioShow-container {
     display:flex;
     width: 100%;
-    margin:2rem 0;
+    margin:2em 0;
   }
+
+
   .imgs {
     display:flex;
     flex-direction: column;
     flex-wrap: wrap;
     width: 50%;
+    margin-top:2rem;
   }
   .img-container {
     position:relative;
@@ -100,7 +114,7 @@
       font-size:1.3rem;
       line-height: 2.7rem;  
       margin-left :1.5rem;
-      margin-top:1.5rem;  
+      margin-top:2.5rem;  
       display:flex;
       flex-direction: column;
       max-width: 50%;
@@ -124,6 +138,15 @@
     font-size:1.3rem;
   }
 
+  .list {
+    margin-top:1rem;
+    margin-bottom:1rem;
+  }
+
+  .page-intro{
+    background-color: rgb(142, 165, 185);
+  }
+
   .description .intro .text {
     margin: 1.4rem 0;
     line-height: 2.5rem;
@@ -135,11 +158,30 @@
 
   }
 
+  .backPage {
+    position:absolute;
+    cursor:pointer;
+    transform: translateX(10%);
+    font-size:1.4rem;
+    background-color: rgb(101,122,141);
+    color:#fff;
+    padding:0.4rem 0.8rem;
+    font-weight: 700;
+    border-radius: 1rem;
+  }
+
   
 
   @media screen and (max-width:800px) {
     .imgs {
       width: 100%;
+    }
+
+    .backPage {
+      top:0;
+      left:15%;
+      margin:0 auto;
+      /* transform: translate(50%,50%); */
     }
 
     .PortfolioShow-container {
@@ -165,6 +207,11 @@
     }
     .closeBtn {
       display:none;
+    }
+    .backPage {
+    transform: translateX(-40%);
+    left:50%;
+      
     }
   }
 </style>
