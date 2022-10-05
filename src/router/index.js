@@ -2,6 +2,7 @@ import VueRouter from 'vue-router'
 import Js from '../pages/Js'
 import H5C3 from '../pages/H5C3'
 import Otherskill from '../pages/Otherskill'
+import PortfolioShow from '../pages/PortfolioShow'
 
 
 export default new VueRouter({
@@ -20,6 +21,11 @@ export default new VueRouter({
             name:'Otherskill',
             path:'/otherskill',
             component:Otherskill,
+        },
+        {
+            name:'PortfolioShow',
+            path:'/portfolioShow',
+            component:PortfolioShow,
         },
     ]
 })

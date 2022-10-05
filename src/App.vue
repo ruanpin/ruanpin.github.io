@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <div id="container">
+    <div id="container" v-show="$route.path != '/portfolioShow'">
       <Header></Header>
       <Home class="components"></Home>
       <Portfolio class="components"></Portfolio>
@@ -8,6 +8,10 @@
       <Experience class="components"></Experience>
       <Contact class="components"></Contact>
     </div>
+    <div class="portfolioShow" v-show="$route.path == '/portfolioShow'">
+      <router-view></router-view>
+    </div>
+
     <Footer></Footer>
   </div>
 </template>
@@ -48,7 +52,7 @@ export default {
 body {
     position: relative;
     width: 100%;
-    height: 2000px;
+    /* height: 2000px; */
     font-family: 'Poppins', sans-serif;
 }
 
@@ -56,9 +60,10 @@ a {
     text-decoration: none;
 }
 
-#container {
+#container, .portfolioShow {
   max-width: 1400px;
   width:85%;
   margin:0px auto;
 }
+
 </style>
