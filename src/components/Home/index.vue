@@ -4,7 +4,7 @@
       <div class="intro-card">
         <div class="img">
           <div class="selfie">
-            <img src="../../assets/selfie.jpg" alt="selfie" />
+            <img src="../../assets/photoofme.png" alt="selfie" />
           </div>
           <ul class="link-icon">
             <li>

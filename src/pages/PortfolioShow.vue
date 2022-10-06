@@ -55,6 +55,12 @@
       goBackBTN(){
         this.$router.go(-1)
       }
+    },
+    mounted(){
+      window.scrollTo({
+        top:0,
+        behavior: 'smooth'
+      })
     }
   }
 </script>
