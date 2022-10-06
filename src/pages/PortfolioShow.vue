@@ -4,6 +4,9 @@
     <div class="imgs">
       <div ref="imgRef" class="img-container" v-for="(imgsrc,index) in srcArr" :key="index" @click="zoomInImg(index)">
         <div class="closeBtn" @click="zoomOutImg(index,$event)" v-show="isCloseShow"><i class="fa-solid fa-xmark"></i></div>
+        <div class="previous toggleBtn" @click="previousImg(index, $event)" v-show="isCloseShow"><i class="fa-solid fa-circle-chevron-left"></i></div>
+        <div class="next toggleBtn"  @click="nextImg(index, $event)" v-show="isCloseShow"><i class="fa-solid fa-circle-chevron-right"></i></div>
+        <div class="pageNow" v-show="isCloseShow">{{index+1}}/{{srcArr.length}}</div>
         <img class="eachImg" :src="`/portfolioScreenShot/${imgsrc}`" alt="portfolioScreenShot">
       </div>
     </div>
@@ -50,10 +53,36 @@
         if (!this.$refs.imgRef[index].classList.contains("zoomIn")) {
           this.isCloseShow = false
         }
+        // 阻止冒泡，否則會失敗
         $event.stopPropagation()
       },
       goBackBTN(){
         this.$router.go(-1)
+      },
+      previousImg(index,$event){
+        // 阻止冒泡，否則會失敗
+        $event.stopPropagation()
+        //先移除原本，再替目標tags加上class
+        this.$refs.imgRef[index].classList.remove("zoomIn");
+        if (!index) {
+          let lastImgIndex = this.srcArr.length - 1
+          this.$refs.imgRef[lastImgIndex].classList.add("zoomIn");
+        } else {
+          let preImgIndex = index - 1 
+          this.$refs.imgRef[preImgIndex].classList.add("zoomIn");
+        }
+      },
+      nextImg (index,$event){
+        // 阻止冒泡，否則會失敗
+        $event.stopPropagation()
+        //先移除原本，再替目標tags加上class
+        this.$refs.imgRef[index].classList.remove("zoomIn");
+        if ((index + 1) == this.srcArr.length) {
+          this.$refs.imgRef[0].classList.add("zoomIn");
+        } else {
+          let nextImgIndex = index + 1 
+          this.$refs.imgRef[nextImgIndex].classList.add("zoomIn");
+        }
       }
     },
     mounted(){
@@ -102,6 +131,28 @@
     font-size:3rem;
     cursor:pointer;
   }
+
+  .toggleBtn {
+    position:absolute;
+    z-index: 20;
+    font-size:3rem;
+    cursor:pointer;
+    top:60%;
+  }
+
+  .next {
+    right:0;
+    transform: translateX(-30%);
+  }
+
+  .pageNow {
+    position:absolute;
+    z-index: 20;
+    font-size:1.4rem;
+    transform: translateY(20%);
+
+  }
+
   .zoomIn {
     position: fixed;
     top:0;
