@@ -42,15 +42,15 @@
         let Timer;
 
         function calWhereAmI (){
-          if(lastKnownScrollPosition>=0&&(lastKnownScrollPosition+450)<componentsTags[1].offsetTop){
+          if(lastKnownScrollPosition>=0&&(lastKnownScrollPosition+580)<componentsTags[1].offsetTop){
             return 0
-          }else if((lastKnownScrollPosition+450)>=componentsTags[1].offsetTop&&(lastKnownScrollPosition+450)<componentsTags[2].offsetTop){
+          }else if((lastKnownScrollPosition+580)>=componentsTags[1].offsetTop&&(lastKnownScrollPosition+580)<componentsTags[2].offsetTop){
             return 1
-          }else if((lastKnownScrollPosition+450)>=componentsTags[2].offsetTop&&(lastKnownScrollPosition+450)<componentsTags[3].offsetTop){
+          }else if((lastKnownScrollPosition+580)>=componentsTags[2].offsetTop&&(lastKnownScrollPosition+580)<componentsTags[3].offsetTop){
             return 2
-          }else if((lastKnownScrollPosition+450)>=componentsTags[3].offsetTop&&(lastKnownScrollPosition+450)<componentsTags[4].offsetTop){
+          }else if((lastKnownScrollPosition+580)>=componentsTags[3].offsetTop&&(lastKnownScrollPosition+580)<componentsTags[4].offsetTop){
             return 3
-          }else if((lastKnownScrollPosition+450)>=componentsTags[4].offsetTop&&lastKnownScrollPosition<document.documentElement.scrollHeight){
+          }else if((lastKnownScrollPosition+580)>=componentsTags[4].offsetTop&&lastKnownScrollPosition<document.documentElement.scrollHeight){
             return 4
           }
         }

@@ -4,8 +4,8 @@
         <div class="title-decoration"></div>
         <h2>Portfolio</h2>
     </div>
-    <transition name="showup">
-        <div v-show="isshow">
+    <transition name="showup" appear>
+        <div>
             
             <!-- Swiper@5.4.5--vue-awesome-swiper@4.1.1-------------------->
             <div class="app-container">
@@ -64,6 +64,7 @@
         name:'Portfolio',
         data(){
             return {
+                //控制是否出現
                 isshow:false,
                 // 設定Swiper選項---------------------------------
                 swiperOption: {
