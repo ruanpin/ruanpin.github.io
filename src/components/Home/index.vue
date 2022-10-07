@@ -8,9 +8,10 @@
           </div>
           <ul class="link-icon">
             <li>
-              <a href="#">
+              <a href="javascript:;">
                 <i class="fa-brands fa-facebook-f"></i>
               </a>
+              <div class="deactivated">已停用</div>
             </li>
             <li>
               <a href="https://github.com/ruanpin?tab=repositories">
@@ -18,19 +19,22 @@
               </a>
             </li>
             <li>
-              <a href="#">
+              <a href="javascript:;">
                 <i class="fa-brands fa-instagram"></i>
               </a>
+              <div class="deactivated">已停用</div>
             </li>
             <li>
-              <a href="#">
+              <a href="javascript:;">
                 <i class="fa-brands fa-linkedin-in"></i>
               </a>
+              <div class="deactivated">已停用</div>
             </li>
             <li>
-              <a href="#">
+              <a href="javascript:;">
                 <i class="fa-brands fa-twitter"></i>
               </a>
+              <div class="deactivated">已停用</div>
             </li>
           </ul>
         </div>
@@ -41,12 +45,14 @@
           </div>
         </div>
       </div>
-      <div class="btn">
-        <a href="javascript:;" id="header-btn" class="header-items" target="_self">
-          Download
-          <br />Resume
-        </a>
-      </div>
+        <div class="btn" @click="stopGo">
+          <a href="javascript:;" id="header-btn" class="header-items" target="_self">
+            Download
+            <br />Resume
+          </a>
+        </div>
+        <div ref="download" class="download-deactivated">已停用</div>
+      
     </div>
 
     <div class="complete-intro">
@@ -94,16 +100,13 @@
             age:26,
             birthday:'1996/02',
           },
-          // opacity:1,
         }
       },
-      mounted(){
-        // window.setInterval(()=>{
-        //   this.opacity -= 0.03
-        //   if(this.opacity<=0){
-        //     this.opacity = 1
-        //   }
-        // },50)
+      methods:{
+        stopGo(){
+          this.$refs.download.classList.toggle('showtips')
+          
+        }
       }
     };
 </script>
@@ -120,6 +123,23 @@
     width: 100%;
     flex-wrap: wrap;
     /* background-color: rgb(138, 171, 184); */
+}
+
+.deactivated {
+  opacity: 0;
+  position: absolute;
+  white-space:nowrap;
+  z-index: 20;
+  background-color: #fff;
+  transform: translate(-25%,-200%);
+  border-radius: 15px;
+  padding:0.1rem 0.5rem;
+  font-weight: 700;
+  font-size:1.2rem;
+}
+
+.link-icon li:hover .deactivated{
+  opacity: 0.95;
 }
 
 /* brief-intro Part----------------------------------------------- */
@@ -174,6 +194,7 @@ header .brief-intro .intro-card .img .link-icon li {
     text-align: center;
     border-radius: 50%;
     line-height: 44px;
+    position:relative;
 }
 
 header .brief-intro .intro-card .img .link-icon li:hover {
@@ -232,8 +253,33 @@ header .brief-intro .btn {
     height: 72px;
     line-height: 36px;
     border-radius: 20px;
-    margin-top:35px;
+    margin-top: 30px;
     overflow: hidden;
+    position:relative;
+}
+
+.download-deactivated {
+    opacity: 0;
+    padding:0.2rem;
+    transform: translateY(-315%);
+    font-weight: 700;
+    font-size: 1.2rem;
+    background-color: rgb(197, 197, 197);
+    padding:0.5rem 0.5rem;
+    border-radius: 15px;
+  
+}
+/* header .brief-intro .btn a:hover .download-deactivated{
+    opacity: 0.95;
+    transform: scale(1.1);  
+} */
+
+.showtips {
+    opacity: 0.95;
+    transform: scale(1.1);  
+    animation: 1s;
+    transform: translateY(-315%);
+
 }
 
 header .brief-intro .btn a{
@@ -246,11 +292,14 @@ header .brief-intro .btn a{
 header .brief-intro .btn a:hover {
     background:#000;
     transition: 0.5s;
+    border-radius: 20px;
+
 }
 
 header .brief-intro .btn:hover {
     transform: scale(1.1);
     transition: 0.5s;
+    border-radius: 20px;
 }
 /* RWD----------------------------------------- */
 @media screen and (max-width:800px) {
@@ -466,6 +515,10 @@ header .complete-intro .title h3{
 @media screen and (max-width:800px) {
   .complete-intro .intro-container {
     margin-top:80px;
+  }
+
+  .brief-intro {
+    height: 400px;
   }
 
   /* .dynamic-text-container {
