@@ -1,24 +1,15 @@
-# profile_vue2
+# 個人網站
 
-## Project setup
-```
-npm install
-```
+這是一個使用Vue建立的個人網站前端專案，內容包括個人資訊、作品集、學經歷、語言證明等。
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+> 實體網站: https://www.ruanpin23.com/
 
-### Compiles and minifies for production
-```
-npm run build
-```
+### 作品集
 
-### Lints and fixes files
-```
-npm run lint
-```
+> 電子商務前端網站 : https://www.ruanpin23.com/#/portfolioShow
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+> 電子商務Github : https://github.com/ruanpin/e-commercial
+
+> 後端 Github : https://github.com/ruanpin/easyServer
+
+
