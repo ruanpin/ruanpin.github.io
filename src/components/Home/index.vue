@@ -8,10 +8,10 @@
           </div>
           <ul class="link-icon">
             <li>
-              <a href="javascript:;">
+              <a href="javascript:;" @click="showwarn('f')">
                 <i class="fa-brands fa-facebook-f"></i>
               </a>
-              <div class="deactivated">已停用</div>
+              <div ref="socialf" class="deactivated">已停用</div>
             </li>
             <li>
               <a href="https://github.com/ruanpin?tab=repositories">
@@ -19,22 +19,22 @@
               </a>
             </li>
             <li>
-              <a href="javascript:;">
+              <a href="javascript:;" @click="showwarn('i')">
                 <i class="fa-brands fa-instagram"></i>
               </a>
-              <div class="deactivated">已停用</div>
+              <div ref="sociali" class="deactivated">已停用</div>
             </li>
             <li>
-              <a href="javascript:;">
+              <a href="javascript:;" @click="showwarn('l')">
                 <i class="fa-brands fa-linkedin-in"></i>
               </a>
-              <div class="deactivated">已停用</div>
+              <div ref="sociall" class="deactivated">已停用</div>
             </li>
             <li>
-              <a href="javascript:;">
+              <a href="javascript:;" @click="showwarn('t')">
                 <i class="fa-brands fa-twitter"></i>
               </a>
-              <div class="deactivated">已停用</div>
+              <div ref="socialt" class="deactivated">已停用</div>
             </li>
           </ul>
         </div>
@@ -106,6 +106,21 @@
         stopGo(){
           this.$refs.download.classList.toggle('showtips')
           
+        },
+        showwarn(item){
+          if(item == 'f'){
+            this.$refs.socialf.classList.toggle('deactivatedShow')
+          } else if(item == 'i') {
+            this.$refs.sociali.classList.toggle('deactivatedShow')
+          } else if(item == 'l') {
+            this.$refs.sociall.classList.toggle('deactivatedShow')
+          } else if(item == 't') {
+            this.$refs.socialt.classList.toggle('deactivatedShow')
+          } 
+          
+          
+          
+          
         }
       }
     };
@@ -138,8 +153,12 @@
   font-size:1.2rem;
 }
 
-.link-icon li:hover .deactivated{
+/* .link-icon li:hover .deactivated{
   opacity: 0.95;
+} */
+.deactivatedShow {
+  opacity: 0.95;
+  transition:0.6s;
 }
 
 /* brief-intro Part----------------------------------------------- */
@@ -264,7 +283,7 @@ header .brief-intro .btn {
     transform: translateY(-315%);
     font-weight: 700;
     font-size: 1.2rem;
-    background-color: rgb(197, 197, 197);
+    background-color: rgb(233, 233, 233);
     padding:0.5rem 0.5rem;
     border-radius: 15px;
   
@@ -277,7 +296,7 @@ header .brief-intro .btn {
 .showtips {
     opacity: 0.95;
     transform: scale(1.1);  
-    animation: 1s;
+    transition: 0.7s;
     transform: translateY(-315%);
 
 }
