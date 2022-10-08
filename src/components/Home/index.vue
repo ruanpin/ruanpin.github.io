@@ -144,7 +144,7 @@
   opacity: 0;
   position: absolute;
   white-space:nowrap;
-  z-index: 20;
+  z-index: 9;
   background-color: #fff;
   transform: translate(-25%,-200%);
   border-radius: 15px;
