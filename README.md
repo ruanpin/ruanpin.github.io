@@ -2,7 +2,7 @@
 
 這是一個使用Vue建立的個人網站前端專案，內容包括個人資訊、作品集、學經歷、語言證明等。
 
-> 實體網站: https://www.ruanpin23.com/
+> 個人網站: https://www.ruanpin23.com/
 
 ### 作品集
 
