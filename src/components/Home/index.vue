@@ -63,12 +63,12 @@
         </div>
       </div>
       
-      <div class="text-container">
-        <div class="fixed-text">自學程式，</div>
-        <div class="dynamic-text-container">
-          <div class="dynamic-div-container">
-            <div class="dynamic-text">擁有搜尋及自學能力</div>
-            <div class="dynamic-text">樂於接觸新技術！</div>
+      <div class="text-container" :class="{english : this.$i18n.locale == 'en'}">
+        <div class="fixed-text" :class="{english : this.$i18n.locale == 'en'}">{{ $t("self-education") }}</div>
+        <div class="dynamic-text-container" :class="{english : this.$i18n.locale == 'en'}">
+          <div class="dynamic-div-container" :class="{english : this.$i18n.locale == 'en'}">
+            <div class="dynamic-text" :class="{english1 : this.$i18n.locale == 'en'}">{{ $t("state1") }}</div>
+            <div class="dynamic-text" :class="{english : this.$i18n.locale == 'en'}">{{ $t("state2") }}</div>
             <!-- <div class="dynamic-text">it's me 3</div> -->
           </div>
           
@@ -419,12 +419,32 @@ header .complete-intro .title h3{
   margin:3em auto;
   /* padding: 30px; */
   font-size: 30px;
+  /* margin-bottom:1em; */
   display: flex;
   flex-direction: column;
   width: 100%;
   /* height:30px; */
-  /* overflow: hidden; */
+  overflow: hidden;
   position: relative;
+}
+
+/* cn:30 */
+.english1 {
+  font-size :18px;
+  margin-top:0.02em;
+  margin-bottom:0.7em;
+  height: 1em;
+  /* transform: translateY(-5%); */
+
+}
+
+.english{
+  font-size :18px;
+  /* height: 50px; */
+  /* margin-top:0.3em; */
+  height: 3.45em;
+  /* transform: translateY(-5.5%); */
+
 }
 
 
@@ -440,7 +460,7 @@ header .complete-intro .title h3{
 .dynamic-text-container::after {
   content:'';
   width:100%;
-  height:100%;
+  height:105%;
   background-color: #fff;
   position:absolute;
   left:0;
@@ -453,6 +473,8 @@ header .complete-intro .title h3{
 .dynamic-text {
   color:rgb(95, 72, 33);
   font-weight: 700;
+  /* margin-bottom:0.9em; */
+
 }
 
 .dynamic-div-container {
@@ -540,6 +562,26 @@ header .complete-intro .title h3{
     height: 400px;
   }
 
+  .english1 {
+  font-size :15px;
+  margin-top:0.02em;
+  margin-bottom:0.7em;
+  height: 1em;
+  transform: translateY(15%);
+  white-space: nowrap;
+
+}
+
+.english{
+  font-size :15px;
+  /* height: 50px; */
+  /* margin-top:0.3em; */
+  height: 3.5em;
+  white-space: nowrap;
+
+  transform: translateY(7%);
+
+}
   /* .dynamic-text-container {
     margin-left:0;
   }

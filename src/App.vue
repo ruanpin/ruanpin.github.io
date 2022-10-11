@@ -9,8 +9,8 @@
       <Contact class="components"></Contact>
     </div>
     <div class="lang-option">
-      <div class="en" @click="changeLanguage('en')">En</div>
-      <div class="cn" @click="changeLanguage('zh')">中文</div>
+      <div class="en" @click="changeLanguage('en')" v-show="this.$i18n.locale=='cn'">English</div>
+      <div class="cn" @click="changeLanguage('zh')" v-show="this.$i18n.locale=='en'">中文</div>
     </div>
     <div class="portfolioShow" v-show="$route.path == '/portfolioShow'">
       <router-view></router-view>
@@ -42,9 +42,9 @@ export default {
     Contact,
   },
   methods:{
-    changeLanguage(index){
-      console.log(this.$i18n.locale)
-      switch (index) {
+    changeLanguage(lang){
+      // console.log(this.$i18n.locale)
+      switch (lang) {
         case "en":
           this.$i18n.locale = "en";
           break;

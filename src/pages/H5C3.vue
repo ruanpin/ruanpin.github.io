@@ -1,6 +1,6 @@
 <template>
   <div>
-      Html, Css, SCSS, Bootstrap{{ $t("name") }}
+      Html, Css, SCSS, Bootstrap
   </div>
 </template>
 

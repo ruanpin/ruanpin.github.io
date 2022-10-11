@@ -34,9 +34,9 @@
                         <div class="description">
                             <h2><span>個人網站</span></h2>
                             <div class="intro">
-                                <p class="text"><span class="intro-title">技術簡介</span> 前端頁面呈現 (Vue.js)</p>
+                                <p class="text"><span class="intro-title">技術簡介</span> 前端頁面呈現 (Vue.js) + 多語言切換 (i18n)</p>
                                 <ul class="list">
-                                    <li><span class="intro-title">前端</span> Vue.js + VueX + VueRouter</li>
+                                    <li><span class="intro-title">前端</span> Vue.js + VueX + VueRouter + i18n</li>
                                     <li><span class="intro-title">版本控制</span> Git + Github</li>
                                 </ul>
                             </div>
