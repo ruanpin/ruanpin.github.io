@@ -9,8 +9,8 @@
       <Contact class="components"></Contact>
     </div>
     <div class="lang-option">
-      <div class="en" @click="changeLanguage('en')" v-show="this.$i18n.locale=='cn'">English</div>
-      <div class="cn" @click="changeLanguage('zh')" v-show="this.$i18n.locale=='en'">中文</div>
+      <div class="en" @click="changeLanguage('en')" v-show="this.$i18n.locale=='cn'">to English</div>
+      <div class="cn" @click="changeLanguage('zh')" v-show="this.$i18n.locale=='en'">切換至中文</div>
     </div>
     <div class="portfolioShow" v-show="$route.path == '/portfolioShow'">
       <router-view></router-view>
@@ -87,12 +87,20 @@ a {
   position:relative;
 }
 
+
 .lang-option {
   position:sticky;
-  bottom:2rem;
+  bottom:88vh;
   z-index: 15;
   margin-left:1rem;
   margin-bottom:1rem;
+  padding:0.4rem 0.7rem;
+  background-color: rgb(101,122,141);
+  display:inline-block;
+  cursor:pointer;
+  border-radius: 1rem;
+  color:#fff;
+  font-weight: 700;
 }
 
 </style>

@@ -8,16 +8,16 @@
         <div v-show="isshow" class="form-section">
             <div class="container">
                 <form method="POST" action="http://127.0.0.1:5000/testPost" class="contact-form">
-                    <p>Keep in touch</p>
-                    <label>名字<br><input type="text" placeholder="請輸入名字" name="username" ref="nameInput" value="" @blur="checkValue"></label>
-                    <span class="warning" v-show="isNameWarningShow">this is required</span><br>
+                    <p>{{ $t("contact-title")}}</p>
+                    <label>{{ $t("name-titie")}}<br><input type="text" :placeholder="namePlacehoder" name="username" ref="nameInput" value="" @blur="checkValue"></label>
+                    <span class="warning" v-show="isNameWarningShow">{{ $t("nameAndEmailTip")}}</span><br>
 
-                    <label>信箱<br><input type="email" placeholder="請輸入信箱" name="useremail" ref="emailInput" value="" @blur="checkValue"></label>
-                    <span class="warning" v-show="isEmailWarningShow">this is required</span><br>
+                    <label>{{ $t("email-title")}}<br><input type="email" :placeholder="emailPlacehoder" name="useremail" ref="emailInput" value="" @blur="checkValue"></label>
+                    <span class="warning" v-show="isEmailWarningShow">{{ $t("nameAndEmailTip")}}</span><br>
 
 
-                    <input type="submit" value="留下聯絡方式" @click="handleSubmit">
-                    <p class="warning sendingWarning" v-show="isSendingWarningShow">請填寫上方表格</p><br>
+                    <input type="submit" :value="submit" @click="handleSubmit">
+                    <p class="warning sendingWarning" v-show="isSendingWarningShow">{{ $t("bigTips")}}</p><br>
                 </form>
             </div>
             <transition name="formMsgShow"> 
@@ -38,12 +38,27 @@
                 isNameWarningShow:false,
                 isEmailWarningShow:false,
                 isSendingWarningShow:false,
+                namePlacehoder:'請輸入名字',
+                emailPlacehoder:'請輸入信箱',
+                submit:'留下聯絡方式',
+
             }
         },
         watch:{
             '$store.state.itemNumber'(newValue, oldValue){
                 if (this.isshow) return
                 this.isshow = this.$store.state.itemNumber>=4
+            },
+            '$i18n.locale' (newValue) {
+                if (newValue == 'en') {
+                    this.namePlacehoder = 'please enter name'
+                    this.emailPlacehoder = 'please enter email'
+                    this.submit = 'leave contact info'
+                } else if (newValue == 'cn') {
+                    this.namePlacehoder = '請輸入名字'
+                    this.emailPlacehoder = '請輸入信箱'
+                    this.submit = '留下聯絡方式'
+                }
             }
         },
         methods:{
@@ -242,6 +257,7 @@
         bottom:1.5em;
         left:50%;
         transform: translateX(-50%);
+        white-space: nowrap;
     }
     
     @keyframes showUp {
