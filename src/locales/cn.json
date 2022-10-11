@@ -1,6 +1,22 @@
 {
-    "name": "名字",
     "self-education": "自學程式，",
     "state1": "擁有搜尋及自學能力",
-    "state2": "樂於接觸新技術！"
+    "state2": "樂於接觸新技術！",
+    "name-titie": "名字",
+    "name": "阮品毓",
+    "age-title": "年齡",
+    "birthday-title": "生日",
+    "education": "理學學士學位",
+    "school": "亞洲大學",
+    "major": "生物科技學系",
+    "license": "英語能力證明",
+    "toeic": "TOEIC測驗",
+    "skills": "技能",
+    "others": "其他",
+    "skillsTips": "請點選藍色框展示",
+    "job-title": "助理工程師",
+    "company": "國光生物科技",
+    "department": "製造部",
+    "full-company-name": "國光生物科技股份有限公司",
+    "job-text": "擔任製造部助理工程師一職，參與日常疫苗製程製造流程、撰寫及制定GMP相關文件，另有參與擴廠專案，協助建置新產線， 及對機台設備進行確效(validation)、驗證(IOPQ)等業務。"
 }

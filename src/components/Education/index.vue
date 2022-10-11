@@ -11,8 +11,8 @@
                     <div class="icon"><i class="fa-solid fa-graduation-cap"></i></div>
                     <div class="edu-content">
                         <h4><span class="iconBGC">2018</span></h4>
-                        <h4><span class="spanStrong">理學學士學位</span> － 亞洲大學</h4>
-                        <p id="edu-major">生物科技學系</p>
+                        <h4><span class="spanStrong">{{ $t("education") }}</span> － {{ $t("school") }}</h4>
+                        <p id="edu-major">{{ $t("major") }}</p>
                     </div>
                 </div>
             </div>
@@ -21,8 +21,8 @@
                 <div class="set-middle-container">
                     <div class="icon"><i class="fa-solid fa-language"></i></div>
                     <div class="edu-content">
-                        <h4><span class="iconBGC">英語能力證明</span></h4>
-                        <h4><span class="spanStrong">TOEIC測驗</span> － 740</h4>
+                        <h4><span class="iconBGC">{{ $t("license") }}</span></h4>
+                        <h4><span class="spanStrong">{{ $t("toeic") }}</span> － 740</h4>
                     </div>
                 </div>
             </div>
@@ -31,11 +31,11 @@
                 <div class="set-middle-container">
                     <div class="icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
                     <div class="edu-content router-content">
-                        <h4><span class="iconBGC">技能</span></h4>
+                        <h4><span class="iconBGC">{{ $t("skills") }}</span></h4>
                         <div class="routers">
                             <h4 @click="routerCounter++"><router-link class="iconBGC skillsBtn" active-class="" to="/js" >JS</router-link></h4>
                             <h4 @click="routerCounter++"><router-link class="iconBGC skillsBtn" active-class="" to="h5c3" >H5&amp;C3</router-link></h4>
-                            <h4 @click="routerCounter++"><router-link class="iconBGC skillsBtn" active-class="" to="otherskill" >其他</router-link></h4>
+                            <h4 @click="routerCounter++"><router-link class="iconBGC skillsBtn" active-class="" to="otherskill" >{{ $t("others") }}</router-link></h4>
 
                             <!-- <h4><a href="#"><span class="iconBGC skillsBtn">JS</span></a></h4>
                             <h4><span class="iconBGC skillsBtn">H5&amp;C3</span></h4>
@@ -43,7 +43,7 @@
                         </div>
                     </div>
                     <div class="router-display-area">
-                        <p v-show="isRouterTipShow">請點選藍色框展示</p>
+                        <p v-show="isRouterTipShow">{{ $t("skillsTips") }}</p>
                         <router-view v-show="!isRouterTipShow"></router-view>
                     </div>
                 </div>
@@ -181,6 +181,7 @@
         border-radius: 1em;
         font-weight: 700;
         color:#fff;
+        white-space: nowrap;
     }
 
     .skillsBtn {

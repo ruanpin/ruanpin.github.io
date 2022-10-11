@@ -1,6 +1,22 @@
 {
-    "name": "name",
     "self-education": "self-education,",
     "state1": "self-learning & searching ability",
-    "state2": "willing to learn new technology!"
+    "state2": "willing to learn new technology!",
+    "name-titie": "name",
+    "name": "Ruan, pin-yu",
+    "age-title": "age",
+    "birthday-title": "birthday",
+    "education": "Bachelor of Science",
+    "school": "Asia University",
+    "major": "Biotechnology",
+    "license": "Language certificate",
+    "toeic": "TOEIC Tests",
+    "skills": "Skills",
+    "others": "Others",
+    "skillsTips": "click blue box to display",
+    "job-title": "Assistant engineer",
+    "company": "Addimmune",
+    "department": "Manufacturing",
+    "full-company-name": "Addimmune Corporation",
+    "job-text": "I work as an assitant engineer in manufacturing department. Vaccine manufacturing process, drafting / modifying / writing GMP relative document, constructing new production lines, verifying equipments and executing IOPQ (Installation / Operational / Performance Qualification) process are my job duties."
 }

@@ -11,15 +11,15 @@
                         <div><i class="fa-solid fa-circle"></i></div>
                     </div>
                     <div class="job-brife">
-                            <h4>助理工程師</h4>
-                            <p class="companyInfo">國光生物科技|製造部</p>
+                            <h4>{{ $t("job-title") }}</h4>
+                            <p class="companyInfo">{{ $t("company") }}</p>
+                            <p class="companyInfo">{{ $t("department") }}</p>
                             <p>2020/2-2022/6</p>
                     </div>
                     <div class="job-intro">
-                            <h4>國光生物科技股份有限公司</h4>
+                            <h4>{{ $t("full-company-name") }}</h4>
                             <p>
-                                擔任製造部助理工程師一職，參與日常疫苗製程製造流程、撰寫及制定GMP相關文件，另有參與擴廠專案，協助建置新產線，
-                                及對機台設備進行確效(validation)、驗證(IOPQ)等業務。
+                                {{ $t("job-text") }}
                             </p>
                     </div>
                 </div>

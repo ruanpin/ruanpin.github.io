@@ -78,9 +78,9 @@
       <div class="info">
         <div class="list"> 
           <ul>
-            <li><span>名字:</span>{{info.name}}</li>
-            <li><span>年齡:</span>{{info.age}}</li>
-            <li><span>生日:</span>{{info.birthday}}</li>
+            <li><span>{{ $t("name-titie") }} :</span>{{ $t("name") }}</li>
+            <li><span>{{ $t("age-title") }} :</span>{{info.age}}</li>
+            <li><span>{{ $t("birthday-title") }} :</span>{{info.birthday}}</li>
           </ul>
         </div>
       </div>
@@ -96,7 +96,6 @@
       data(){
         return {
           info:{
-            name:'阮品毓',
             age:26,
             birthday:'1996/02',
           },
