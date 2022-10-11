@@ -89,7 +89,7 @@ a {
 
 
 .lang-option {
-  position:sticky;
+  position:fixed;
   font-size: 1.3rem;
   bottom:1rem;
   z-index: 15;
