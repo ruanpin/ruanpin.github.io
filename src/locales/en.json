@@ -20,7 +20,16 @@
     "full-company-name": "Addimmune Corporation",
     "job-text": "I work as an assitant engineer in manufacturing department. Vaccine manufacturing, drafting / modifying / writing GMP relative document, constructing new production lines, verifying equipments and executing IOPQ (Installation / Operational / Performance Qualification) process are my job duties.",
     "contact-title": "Keep in touch",
-    "email-title": "email",
+    "email-title": "Email",
     "nameAndEmailTip": "this is required",
-    "bigTips": "Please fill out the form"
+    "bigTips": "Please fill out the form",
+    "e-commercial": "E-commercial website",
+    "personal":"Personal website",
+    "tech-intro": "Tech introduction",
+    "front-end": "Front end",
+    "back-end": "Back end",
+    "database": "Database",
+    "version-control": "Version Control",
+    "go-github": "Go github",
+    "go-intro": "Go introduction"
 }

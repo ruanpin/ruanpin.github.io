@@ -15,33 +15,33 @@
                     <swiper-slide class="swiper_slide_item slide">
                         <img class="img" src="/Portfolio/ProductSearch.PNG" alt="e-commercial website">
                         <div class="description">
-                            <h2><span>電子商務網站</span></h2>
+                            <h2><span>{{ $t("e-commercial")}}</span></h2>
                             <div class="intro">
-                                <p class="text"><span class="intro-title">技術簡介</span> 串接第三方API (Instagram)、前端頁面呈現 (Vue)、串接/撰寫後端伺服器API (Express)、資料庫增刪查改CRUD (註冊/登入系統、會員訂單查詢、購物車功能、下訂單功能)</p>
+                                <p class="text"><span class="intro-title">{{ $t("tech-intro")}}</span> 串接第三方API (Instagram)、前端頁面呈現 (Vue)、串接/撰寫後端伺服器API (Express)、資料庫增刪查改CRUD (註冊/登入系統、會員訂單查詢、購物車功能、下訂單功能)</p>
                                 <ul class="list">
-                                    <li><span class="intro-title">前端</span> Vue.js + VueX + VueRouter + SCSS + Axios + Mock.js..等</li>
-                                    <li><span class="intro-title">後端</span> Node.js + Express + Mongoose</li>
-                                    <li><span class="intro-title">資料庫</span> MongoDB</li>
-                                    <li><span class="intro-title">版本控制</span> Git + Github</li>
+                                    <li><span class="intro-title">{{ $t("front-end")}}</span> Vue.js + VueX + VueRouter + SCSS + Axios + Mock.js..等</li>
+                                    <li><span class="intro-title">{{ $t("back-end")}}</span> Node.js + Express + Mongoose</li>
+                                    <li><span class="intro-title">{{ $t("database")}}</span> MongoDB</li>
+                                    <li><span class="intro-title">{{ $t("version-control")}}</span> Git + Github</li>
                                 </ul>
                             </div>
                         </div>
-                        <p class="btn-container"><a class="btn" href="https://github.com/ruanpin/e-commercial" target="_blank"><i class="fa-brands fa-github" style="margin-right:0.5rem"></i>前往Github</a></p>
-                        <p class="btn-container"><a class="btn" @click="goPortfolioShow">前往網站介紹</a></p>
+                        <p class="btn-container"><a class="btn" href="https://github.com/ruanpin/e-commercial" target="_blank"><i class="fa-brands fa-github" style="margin-right:0.5rem"></i>{{ $t("go-github")}}</a></p>
+                        <p class="btn-container"><a class="btn" @click="goPortfolioShow">{{ $t("go-intro")}}</a></p>
                     </swiper-slide>
                     <swiper-slide class="swiper_slide_item slide">
                         <img class="img" src="/Portfolio/personal_website.PNG" alt="personal website">
                         <div class="description">
-                            <h2><span>個人網站</span></h2>
+                            <h2><span>{{ $t("personal") }}</span></h2>
                             <div class="intro">
-                                <p class="text"><span class="intro-title">技術簡介</span> 前端頁面呈現 (Vue.js) + 多語言切換 (i18n)</p>
+                                <p class="text"><span class="intro-title">{{ $t("tech-intro")}}</span> 前端頁面呈現 (Vue.js) + 多語言切換 (i18n)</p>
                                 <ul class="list">
-                                    <li><span class="intro-title">前端</span> Vue.js + VueX + VueRouter + i18n</li>
-                                    <li><span class="intro-title">版本控制</span> Git + Github</li>
+                                    <li><span class="intro-title">{{ $t("front-end")}}</span> Vue.js + VueX + VueRouter + i18n</li>
+                                    <li><span class="intro-title">{{ $t("version-control")}}</span> Git + Github</li>
                                 </ul>
                             </div>
                         </div>
-                        <p class="btn-container"><a class="btn" href="https://github.com/ruanpin/ruanpin.github.io" target="_blank"><i class="fa-brands fa-github" style="margin-right:0.5rem"></i>前往Github</a></p>
+                        <p class="btn-container"><a class="btn" href="https://github.com/ruanpin/ruanpin.github.io" target="_blank"><i class="fa-brands fa-github" style="margin-right:0.5rem"></i>{{ $t("go-github")}}</a></p>
                     </swiper-slide>
                     <!-- <swiper-slide class="swiper_slide_item">
                         Slide 3

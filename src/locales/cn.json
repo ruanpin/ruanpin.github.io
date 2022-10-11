@@ -22,5 +22,14 @@
     "contact-title": "保持聯絡",
     "email-title": "信箱",
     "nameAndEmailTip": "必填",
-    "bigTips": "請填寫上方表格"
+    "bigTips": "請填寫上方表格",
+    "e-commercial": "電子商務網站",
+    "personal": "個人網站",
+    "tech-intro": "技術簡介",
+    "front-end": "前端",
+    "back-end": "後端",
+    "database": "資料庫",
+    "version-control": "版本控制",
+    "go-github": "前往github",
+    "go-intro": "前往網站介紹"
 }
