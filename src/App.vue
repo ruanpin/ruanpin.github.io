@@ -8,6 +8,10 @@
       <Experience class="components"></Experience>
       <Contact class="components"></Contact>
     </div>
+    <div class="lang-option">
+      <div class="en" @click="changeLanguage('en')">En</div>
+      <div class="cn" @click="changeLanguage('zh')">中文</div>
+    </div>
     <div class="portfolioShow" v-show="$route.path == '/portfolioShow'">
       <router-view></router-view>
     </div>
@@ -36,6 +40,19 @@ export default {
     Education,
     Experience,
     Contact,
+  },
+  methods:{
+    changeLanguage(index){
+      console.log(this.$i18n.locale)
+      switch (index) {
+        case "en":
+          this.$i18n.locale = "en";
+          break;
+        case "zh":
+          this.$i18n.locale = "cn";
+          break;
+      }
+    }
   }
 }
 </script>
@@ -64,6 +81,18 @@ a {
   max-width: 1400px;
   width:85%;
   margin:0px auto;
+}
+
+#app {
+  position:relative;
+}
+
+.lang-option {
+  position:sticky;
+  bottom:2rem;
+  z-index: 15;
+  margin-left:1rem;
+  margin-bottom:1rem;
 }
 
 </style>

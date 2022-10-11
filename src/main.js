@@ -14,8 +14,12 @@ Vue.use(VueRouter)
 // 引入VueAwesomeSwiper-------------------
 Vue.use(VueAwesomeSwiper)
 
+
+import i18n from "./18n";
+
 new Vue({
   render: h => h(App),
   router,
   store,
+  i18n,
 }).$mount('#app')
