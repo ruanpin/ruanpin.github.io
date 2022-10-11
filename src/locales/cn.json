@@ -31,5 +31,12 @@
     "database": "資料庫",
     "version-control": "版本控制",
     "go-github": "前往github",
-    "go-intro": "前往網站介紹"
+    "go-intro": "前往網站介紹",
+    "API": "串接第三方API (Instagram)",
+    "Vue": "前端頁面呈現 (Vue.js)",
+    "Express": "串接/撰寫後端伺服器API (Express)",
+    "databaseCRUD": "資料庫增刪查改CRUD (註冊/登入系統、會員訂單查詢、購物車功能、下訂單功能)",
+    "ect": "等",
+    "multi-lang": "多語言切換 (i18n)",
+    "deactivated":"已停用"
 }

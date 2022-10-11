@@ -1,5 +1,5 @@
 <template>
-  <div id="portfolio">
+  <div id="portfolio" :class="{portfolioEnglish:this.$i18n.locale == 'en'}">
     <div class="title">
         <div class="title-decoration"></div>
         <h2>Portfolio</h2>
@@ -9,17 +9,17 @@
             
             <!-- Swiper@5.4.5--vue-awesome-swiper@4.1.1-------------------->
             <div class="app-container">
-                <swiper :options="swiperOption" id="mySwiper">
+                <swiper :options="swiperOption" class="mySwiper" :class="{mySwiperEnglish:this.$i18n.locale == 'en'}">
 
                     <!-- 輪播圖分頁 -->
-                    <swiper-slide class="swiper_slide_item slide">
+                    <swiper-slide class="swiper_slide_item slide" :class="{swiper_slide_itemEnglish:this.$i18n.locale == 'en'}">
                         <img class="img" src="/Portfolio/ProductSearch.PNG" alt="e-commercial website">
                         <div class="description">
                             <h2><span>{{ $t("e-commercial")}}</span></h2>
                             <div class="intro">
-                                <p class="text"><span class="intro-title">{{ $t("tech-intro")}}</span> 串接第三方API (Instagram)、前端頁面呈現 (Vue)、串接/撰寫後端伺服器API (Express)、資料庫增刪查改CRUD (註冊/登入系統、會員訂單查詢、購物車功能、下訂單功能)</p>
+                                <p class="text"><span class="intro-title">{{ $t("tech-intro")}}</span> {{ $t("API")}}、{{ $t("Vue")}}、{{ $t("Express")}}、{{ $t("databaseCRUD")}}</p>
                                 <ul class="list">
-                                    <li><span class="intro-title">{{ $t("front-end")}}</span> Vue.js + VueX + VueRouter + SCSS + Axios + Mock.js..等</li>
+                                    <li><span class="intro-title">{{ $t("front-end")}}</span> Vue.js + VueX + VueRouter + SCSS + Axios + Mock.js..{{ $t("ect")}}</li>
                                     <li><span class="intro-title">{{ $t("back-end")}}</span> Node.js + Express + Mongoose</li>
                                     <li><span class="intro-title">{{ $t("database")}}</span> MongoDB</li>
                                     <li><span class="intro-title">{{ $t("version-control")}}</span> Git + Github</li>
@@ -34,7 +34,7 @@
                         <div class="description">
                             <h2><span>{{ $t("personal") }}</span></h2>
                             <div class="intro">
-                                <p class="text"><span class="intro-title">{{ $t("tech-intro")}}</span> 前端頁面呈現 (Vue.js) + 多語言切換 (i18n)</p>
+                                <p class="text"><span class="intro-title">{{ $t("tech-intro")}}</span> {{ $t("Vue")}} + {{ $t("multi-lang")}}</p>
                                 <ul class="list">
                                     <li><span class="intro-title">{{ $t("front-end")}}</span> Vue.js + VueX + VueRouter + i18n</li>
                                     <li><span class="intro-title">{{ $t("version-control")}}</span> Git + Github</li>
@@ -48,7 +48,7 @@
                     </swiper-slide> -->
 
                     <!-- 下方動態小圓點 -->
-                    <div class="swiper-pagination" slot="pagination"></div>
+                    <!-- <div class="swiper-pagination" slot="pagination"></div> -->
                     <!-- 控制左右按鈕 -->
                     <div class="swiper-button-prev swiper-btn" slot="button-prev"></div> 
                     <div class="swiper-button-next swiper-btn" slot="button-next"></div>
@@ -72,8 +72,8 @@
                     pagination: {
                         el: ".swiper-pagination",
                         clickable: true,
-                        type: 'bullets', 
-                        dynamicBullets: true,  //可隱藏其他的分頁器圓點(type為bullets時)
+                        // type: 'bullets', 
+                        // dynamicBullets: true,  //可隱藏其他的分頁器圓點(type為bullets時)
                         // renderBullet(index, className) {       // 自訂樣式
                         //     return `<span class="${className} swiper-pagination-bullet-custom">${index + 1}</span>`
                         // },
@@ -119,7 +119,7 @@
     #portfolio {
         width: 100%;
         /* background-color: skyblue; */
-        height: 1180px;
+        height: 1350px;
         margin : 33px auto;
     }
 
@@ -248,10 +248,10 @@
     /* Swiper----------------- */
 
 
-    #mySwiper{
+    .mySwiper{
         width: 80%;
         height: 1100px;
-        background-color: aquamarine;
+        background-color: rgb(245,235,216);
         border-radius: 35px;
     }
 
@@ -267,24 +267,35 @@
         height: 20px !important;
     }
 
-    #mySwiper {
+    .mySwiper {
         --swiper-navigation-color:rgb(95, 72, 33);
         --swiper-pagination-color:rgb(95, 72, 33);
     }
 
     @media screen and (max-width:800px) {
-        #mySwiper {
+        .portfolioEnglish {
+            height: 1350px;
+        }
+
+        .mySwiper {
             width: 98%;
         }
         .btn-container {
             margin:2.2rem 0;
         }
-        #mySwiper{
-            height: 1050px;
+        .mySwiper{
+            height: 1100px;
+        }
+        .mySwiperEnglish {
+            height: 1250px;
         }
 
         .swiper-slide.swiper_slide_item{
-            height: 1050px;
+            height: 1100px;
+        }
+
+        .swiper-slide.swiper_slide_itemEnglish{
+            height: 1250px;
         }
     }
 

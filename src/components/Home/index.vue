@@ -7,12 +7,12 @@
             <img src="../../assets/photoofme.png" alt="selfie" />
           </div>
           <ul class="link-icon">
-            <li>
+            <!-- <li>
               <a href="javascript:;" @click="showwarn('f')">
                 <i class="fa-brands fa-facebook-f"></i>
               </a>
-              <div ref="socialf" class="deactivated">已停用</div>
-            </li>
+              <div ref="socialf" class="deactivated">{{ $t("deactivated") }}</div>
+            </li> -->
             <li>
               <a href="https://github.com/ruanpin?tab=repositories">
                 <i class="fa-brands fa-github"></i>
@@ -22,20 +22,20 @@
               <a href="javascript:;" @click="showwarn('i')">
                 <i class="fa-brands fa-instagram"></i>
               </a>
-              <div ref="sociali" class="deactivated">已停用</div>
+              <div ref="sociali" class="deactivated" :class="{deactivatedEnglish:this.$i18n.locale == 'en'}">{{ $t("deactivated") }}</div>
             </li>
             <li>
               <a href="javascript:;" @click="showwarn('l')">
                 <i class="fa-brands fa-linkedin-in"></i>
               </a>
-              <div ref="sociall" class="deactivated">已停用</div>
+              <div ref="sociall" class="deactivated" :class="{deactivatedEnglish:this.$i18n.locale == 'en'}">{{ $t("deactivated") }}</div>
             </li>
-            <li>
+            <!-- <li>
               <a href="javascript:;" @click="showwarn('t')">
                 <i class="fa-brands fa-twitter"></i>
               </a>
-              <div ref="socialt" class="deactivated">已停用</div>
-            </li>
+              <div ref="socialt" class="deactivated">{{ $t("deactivated") }}</div>
+            </li> -->
           </ul>
         </div>
         <div class="info-box">
@@ -51,7 +51,7 @@
             <br />Resume
           </a>
         </div>
-        <div ref="download" class="download-deactivated">已停用</div>
+        <div ref="download" class="download-deactivated">{{ $t("deactivated") }}</div>
       
     </div>
 
@@ -152,6 +152,10 @@
   font-size:1.2rem;
 }
 
+.deactivatedEnglish {
+  transform: translate(-35%,-200%);
+}
+
 /* .link-icon li:hover .deactivated{
   opacity: 0.95;
 } */
@@ -216,9 +220,9 @@ header .brief-intro .intro-card .img .link-icon li {
 }
 
 header .brief-intro .intro-card .img .link-icon li:hover {
-    background: #000;
+    /* background: #000;
     transform: scale(1.1);
-    transition: 0.4s;
+    transition: 0.4s; */
 }
 
 header .brief-intro .intro-card .img .link-icon li a {
@@ -227,18 +231,18 @@ header .brief-intro .intro-card .img .link-icon li a {
     height: 100%; */
 }
 
-header .brief-intro .intro-card .img .link-icon li:nth-child(1),
+/* header .brief-intro .intro-card .img .link-icon li:nth-child(1),
 header .brief-intro .intro-card .img .link-icon li:nth-child(5) {
     position: relative;
     top:-55px;
-}
+} */
 
-header .brief-intro .intro-card .img .link-icon li:nth-child(even) {
+header .brief-intro .intro-card .img .link-icon li:nth-child(odd) {
     position: relative;
-    top:-25px;
+    top:-37px;
 }
 
-header .brief-intro .intro-card .img .link-icon li:nth-child(3) {
+header .brief-intro .intro-card .img .link-icon li:nth-child(2) {
     position: relative;
     top:-15px;
 }
@@ -308,9 +312,9 @@ header .brief-intro .btn a{
 }
 
 header .brief-intro .btn a:hover {
-    background:#000;
+    /* background:#000;
     transition: 0.5s;
-    border-radius: 20px;
+    border-radius: 20px; */
 
 }
 
@@ -355,7 +359,7 @@ header .brief-intro .btn:hover {
         line-height: 38px;
     }
 
-    header .brief-intro .intro-card .img .link-icon li:nth-child(1),
+    /* header .brief-intro .intro-card .img .link-icon li:nth-child(1),
     header .brief-intro .intro-card .img .link-icon li:nth-child(5) {
         position: relative;
         top:-50px;
@@ -364,12 +368,8 @@ header .brief-intro .btn:hover {
     header .brief-intro .intro-card .img .link-icon li:nth-child(even) {
         position: relative;
         top:-27px;
-    }
-
-    header .brief-intro .intro-card .img .link-icon li:nth-child(3) {
-        position: relative;
-        top:-15px;
-    }   
+    } */
+ 
 
     header .brief-intro .intro-card .img .link-icon li i {
         font-size: 22px;
