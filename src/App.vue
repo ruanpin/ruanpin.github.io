@@ -8,7 +8,7 @@
       <Experience class="components"></Experience>
       <Contact class="components"></Contact>
     </div>
-    <div class="lang-option">
+    <div class="lang-option" v-show="$route.path != '/portfolioShow'">
       <div class="en" @click="changeLanguage('en')" v-show="this.$i18n.locale=='cn'">to English</div>
       <div class="cn" @click="changeLanguage('zh')" v-show="this.$i18n.locale=='en'">切換至中文</div>
     </div>
