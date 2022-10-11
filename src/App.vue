@@ -90,7 +90,7 @@ a {
 
 .lang-option {
   position:sticky;
-  bottom:88vh;
+  bottom:1rem;
   z-index: 15;
   margin-left:1rem;
   margin-bottom:1rem;
@@ -101,6 +101,7 @@ a {
   border-radius: 1rem;
   color:#fff;
   font-weight: 700;
+  line-height: 1rem
 }
 
 </style>
