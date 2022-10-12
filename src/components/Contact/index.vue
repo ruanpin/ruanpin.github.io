@@ -21,7 +21,7 @@
                 </form>
             </div>
             <transition name="formMsgShow"> 
-                <div v-show="FormMsg">{{FormMsg}}</div> 
+                <div v-show="FormMsg" class="FormMsg">{{FormMsg}}</div> 
             </transition>
         </div>
     </transition>
@@ -289,6 +289,10 @@
 
     .formMsgShow-enter-active {
         animation: FormMsgShow 1s;
+    }
+
+    .FormMsg {
+        margin-top:2rem;
     }
 
     @media screen and (max-width:800px) {
