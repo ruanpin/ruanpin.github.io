@@ -66,12 +66,12 @@
       <div class="text-container" :class="{english : this.$i18n.locale == 'en'}">
         <div class="fixed-text" :class="{english : this.$i18n.locale == 'en'}">{{ $t("self-education") }}</div>
         <div class="dynamic-text-container" :class="{english : this.$i18n.locale == 'en'}">
-          <div class="dynamic-div-container" :class="{english : this.$i18n.locale == 'en'}">
+          <div class="dynamic-div-container" :class="{english : this.$i18n.locale == 'en'}" v-show="info.countDown">
             <div class="dynamic-text" :class="{english1 : this.$i18n.locale == 'en'}">{{ $t("state1") }}</div>
             <div class="dynamic-text" :class="{english : this.$i18n.locale == 'en'}">{{ $t("state2") }}</div>
             <!-- <div class="dynamic-text">it's me 3</div> -->
           </div>
-          
+          <div class="block" v-show="info.countDown"></div>
         </div>
       </div>
 
@@ -98,6 +98,7 @@
           info:{
             age:26,
             birthday:'1996/02',
+            countDown:false
           },
         }
       },
@@ -116,11 +117,12 @@
           } else if(item == 't') {
             this.$refs.socialt.classList.toggle('deactivatedShow')
           } 
-          
-          
-          
-          
         }
+      },
+      mounted(){
+        setTimeout(()=>{
+          this.info.countDown = true
+        },10)
       }
     };
 </script>
@@ -456,7 +458,7 @@ header .complete-intro .title h3{
   /* margin-left: 0.7em; */
 }
 
-.dynamic-text-container::after {
+/* .dynamic-text-container::after {
   content:'';
   width:100%;
   height:105%;
@@ -466,7 +468,17 @@ header .complete-intro .title h3{
   top:0;
   border-left:black 2px solid;
   animation: typingEffect 3s steps(20) infinite;
-  /* cursorBlinks 1s steps(20) infinite; */
+} */
+
+.block {
+  width:100%;
+  height:105%;
+  background-color: #fff;
+  position:absolute;
+  left:0;
+  top:0;
+  border-left:black 2px solid;
+  animation: typingEffect 3s steps(20) infinite;
 }
 
 .dynamic-text {
